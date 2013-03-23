@@ -16,3 +16,5 @@ This theme does not use minified versions of the code, it expects the WordPress 
 the load.
 
 */
+@import url('css/bootstrap.css');
+@import url('css/bootstrap-responsive.css');
