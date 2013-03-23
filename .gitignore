@@ -1,2 +1,5 @@
 *.iml
 .idea/
+css/bootstrap.min.css
+css/bootstrap-responsive.min.css
+js/bootstrap.min.js
