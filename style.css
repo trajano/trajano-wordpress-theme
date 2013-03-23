@@ -1,0 +1,18 @@
+/*
+Theme Name: Trajano
+Theme URI: http://github.com/trajano/trajano-wordpress-theme
+Description: This theme is targeted for personal text content blogs with a single author.  It uses a responsive
+magazine layout  that provides a featured article header, followed by the rest of the posts on an infinite scroll.
+Author: trajano
+Author URI: http://www.trajano.net/
+Version: 1.0
+Tags: bootstrap, infinite-scroll, magazine, masonry
+
+License: Eclipse Public License v1.0
+License URI: http://www.eclipse.org/legal/epl-v10.html
+
+General comments (optional).
+This theme does not use minified versions of the code, it expects the WordPress site to use [W3 Total Cache] to reduce
+the load.
+
+*/
