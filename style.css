@@ -18,7 +18,73 @@ the load.
 */
 
 /* Ensure the image on the brand is aligned well */
-.navbar .brand img {
+#siteNav .navbar .brand img {
   vertical-align: middle;
   margin-right: 0.5em;
+}
+
+/* Sidebar widget overrides. */
+#sidebar .widget {
+  margin-bottom: 40px;
+}
+
+#sidebar .widget a {
+  text-decoration: none;
+}
+
+#sidebar .widget h2 {
+  font-size: 14px;
+  border-bottom: 1px solid;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+#sidebar .widget ul {
+  padding-right: 0;
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  list-style: none inside none;
+}
+
+#sidebar .widget ul ul {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-bottom: 0;
+  margin-left: 0;
+  list-style: none;
+}
+
+#sidebar .widget ul > li:hover {
+  border-radius: 10px;
+  overflow: inherit;
+  background-color: #dddddd;
+}
+
+#sidebar .widget ul ul > li:hover {
+  border-radius: 10px;
+  background-color: #22dddd;
+}
+
+#sidebar .widget ul > li > a,
+#sidebar .widget ul ul > li > a,
+#sidebar .widget ul ul ul > li > a {
+  display: block;
+  padding: 3px 15px;
+}
+
+/* Tag cloud widget */
+.tagcloud {
+  padding-top: 10px;
+}
+
+.tagcloud a {
+  padding: 10px;
+  white-space: nowrap;
+}
+
+.tagcloud a:hover,
+.tagcloud a:focus {
+  background-color: #dddddd;
+  border-radius: 10px;
 }

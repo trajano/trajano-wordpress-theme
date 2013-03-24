@@ -18,20 +18,20 @@ function twp_home_icon_image()
 }
 
 /**
- * Returns the CSS classes for mainArea.  If sidebar is present it is "span6" else it is "span12".
+ * Returns the CSS classes for mainArea.  If sidebar is present and active it is "span6" else it is "span12".
  */
 function twp_posts_classes()
 {
-  echo get_theme_mod("trajano_sidebar_location") == "none" ? "span12" : "span6";
+  echo (get_theme_mod("trajano_sidebar_location") == "none" || !is_active_sidebar('sidebar-1')) ? "span12" : "span8";
 }
 
 /**
  * Displays the sidebar if the position matches.
- * @param $position position of the sidebar
+ * @param string $position position of the sidebar
  */
 function twp_sidebar($position)
 {
   if (get_theme_mod("trajano_sidebar_location") == $position) {
-    get_sidebar();
+    get_sidebar("sidebar-1");
   }
 }
