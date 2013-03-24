@@ -1,9 +1,18 @@
 <?php get_header(); ?>
-<?php if (get_theme_mod("trajano_sidebar_location") == "left") {
-  get_sidebar();
-} ?>
-<?php if (get_theme_mod("trajano_sidebar_location") == "right") {
-  get_sidebar();
-}
-?>
+<div class="container">
+  <div class="row">
+    <?php twp_sidebar("left"); ?>
+    <div id="mainArea" class="<?php twp_posts_classes() ?>">
+      <?php
+      if (have_posts()) {
+        while (have_posts()) {
+          the_post();
+          the_content();
+        }
+      }
+      ?>
+    </div>
+    <?php twp_sidebar("right"); ?>
+  </div>
+</div>
 <?php get_footer(); ?>

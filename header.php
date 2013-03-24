@@ -18,7 +18,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-      <a class="brand" href="<?php bloginfo('url'); ?>"><?php get_home_icon_image(); bloginfo('name'); ?></a>
+      <a class="brand" href="<?php bloginfo('url'); ?>"><?php twp_home_icon_image(); bloginfo('name'); ?></a>
 
       <div class="nav-collapse collapse">
         <form class="navbar-search pull-right" action="?php bloginfo('url'); ?>">
@@ -29,14 +29,3 @@
     </div>
   </div>
 </div>
-<?php
-function get_home_icon_image()
-{
-  $imageUrl = get_theme_mod("trajano_home_icon_image");
-  if (strlen(get_theme_mod("trajano_home_icon_image")) == 0) {
-    echo "<i class='icon-home icon-white'> </i> ";
-  } else {
-    echo sprintf("<img src='%s' alt='' />", $imageUrl);
-  }
-}
-?>
