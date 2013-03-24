@@ -17,4 +17,10 @@ bootswatch/js/
 bootswatch/swatchmaker/
 css/bootstrap-responsive.min.css
 css/bootstrap.min.css
+fontawesome/*.*
+fontawesome/.gitignore
+fontawesome/css/*.min.css
+fontawesome/docs/
+fontawesome/less/
+fontawesome/sass/
 js/bootstrap.min.js
