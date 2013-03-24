@@ -16,7 +16,8 @@ class ThemeOptions
      * Colors section
      */
     $wp_customize->add_setting("trajano_bootstrap_css", array (
-      "default" => "css/bootstrap.css"
+      "default" => "css/bootstrap.css",
+      "transport" => "postMessage"
     ));
     $wp_customize->add_control("bootstrap_css", array (
       'label' => __('Bootswatch style'),
@@ -92,7 +93,8 @@ class ThemeOptions
   }
 
   /**
-   * Registers the theme customizer.
+   * Registers the theme customizer.  This will register the enqueueThemeCustomizerScript function to the
+   * "customize_preview_init" action.
    *
    * This function is attached to the "customize_register" action hook.
    */
@@ -100,6 +102,15 @@ class ThemeOptions
   {
     $theme_options = new ThemeOptions();
     $theme_options->registerOptions($wp_customize);
+    add_action("customize_preview_init", "trajano\\ThemeOptions::enqueueThemeCustomizerScript");
+  }
+
+  /**
+   * Enqueue the theme-customizer.js file.
+   */
+  public static function enqueueThemeCustomizerScript()
+  {
+    wp_enqueue_script("theme-customizer", get_template_directory_uri() . "/js/theme-customizer.js");
   }
 }
 
