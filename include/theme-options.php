@@ -109,7 +109,7 @@ function twp_customize_register($wp_customize)
  */
 function twp_enqueue_theme_customizer_script()
 {
-  wp_enqueue_script("theme-customizer", get_template_directory_uri() . "/js/theme-customizer.js");
+  wp_enqueue_script("theme-customizer", get_template_directory_uri() . "/js/theme-customizer.js", array("jquery"));
 }
 
 add_action("customize_register", "twp_customize_register");
