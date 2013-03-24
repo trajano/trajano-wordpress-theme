@@ -21,9 +21,14 @@
       <a class="brand" href="<?php bloginfo('url'); ?>"><?php twp_home_icon_image(); bloginfo('name'); ?></a>
 
       <div class="nav-collapse collapse">
-        <form class="navbar-search pull-right" action="?php bloginfo('url'); ?>">
-          <input type="text" name="s" class="search-query" placeholder="<?php _e('Search'); ?>">
-        </form>
+        <ul class="nav pull-right">
+          <li>
+            <form class="navbar-search" action="?php bloginfo('url'); ?>">
+              <input type="text" name="s" class="search-query" placeholder="<?php _e('Search'); ?>">
+            </form>
+          </li>
+          <li><a href="<?php echo get_bloginfo_rss('rss2_url'); ?>"><i class="icon-rss icon-white"> </i></a></li>
+        </ul>
       </div>
 
     </div>
