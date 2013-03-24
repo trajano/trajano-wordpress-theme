@@ -8,10 +8,18 @@ Objectives
 * Magazine style layout
 * [Responsive web design][rwd]
 * No animations that are not triggered by a user action (e.g. resize or mouse click).
-* Make use of infinite scroll to handle large amounts of posts
+* Make use of [infinite scroll][is] to handle large amounts of posts
 
 This theme does not use minified versions of the code, it expects the WordPress site to use [W3 Total Cache][w3tc] to
 reduce the load.  This was done to make it easier to extend and debug problems on the theme,
 
+Technology used
+---------------
+* Twitter Bootstrap
+* Bootswatch
+* Font Awesome
+
 [rwd]: http://en.wikipedia.org/wiki/Responsive_web_design
 [w3tc]: http://wordpress.org/extend/plugins/w3-total-cache/
+[is]: http://jetpack.me/support/infinite-scroll/
+
