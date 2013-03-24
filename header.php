@@ -5,7 +5,6 @@
   <title><?php bloginfo('name'); ?> | <?php is_home() ? bloginfo('description') : wp_title(''); ?></title>
   <meta name="description" content="<?php bloginfo('description'); ?>">
   <link rel="profile" href="http://gmpg.org/xfn/11"/>
-  <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen"/>
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
   <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery-1.9.1.js"></script>
   <script src="<?php bloginfo('stylesheet_directory'); ?>/js/bootstrap.js"></script>
