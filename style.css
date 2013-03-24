@@ -16,3 +16,9 @@ This theme does not use minified versions of the code, it expects the WordPress 
 the load.
 
 */
+
+/* Ensure the image on the brand is aligned well */
+.navbar .brand img {
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
