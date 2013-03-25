@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php
+wp_enqueue_script("twp-enable-masonry", get_template_directory_uri() . "/js/enable-masonry.js", array("jquery-masonry"));
+get_header();
+?>
 <div class="container">
   <div class="row">
     <?php twp_sidebar("left"); ?>

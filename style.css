@@ -88,3 +88,13 @@ the load.
   background-color: #dddddd;
   border-radius: 10px;
 }
+
+/* Content area when there are multiple posts */
+.blog #content article {
+  width: 220px;
+  float: left;
+}
+
+.blog #content article .entry-excerpt {
+  overflow: hidden;
+}
