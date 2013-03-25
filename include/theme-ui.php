@@ -22,7 +22,7 @@ function twp_home_icon_image()
  */
 function twp_posts_classes()
 {
-  echo (get_theme_mod("trajano_sidebar_location") == "none" || !is_active_sidebar('sidebar-1')) ? "span12" : "span8";
+  echo (get_theme_mod("trajano_sidebar_location") == "none" || !is_active_sidebar('sidebar-1')) ? "span12" : "span9";
 }
 
 /**
