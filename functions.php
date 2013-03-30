@@ -22,6 +22,6 @@ function twp_ends_with($haystack, $needle)
 $includeDir = opendir(get_template_directory()  . "/include");
 while ($path = readdir($includeDir)) {
   if (twp_ends_with($path, ".php")) {
-    require_once(dirname(__FILE__) . "/include/" . $path);
+    locate_template("/include/" . $path, true, true);
   }
 }
