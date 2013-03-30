@@ -1,3 +1,4 @@
+"use strict";
 jQuery(function ($) {
   $('#content').masonry({
     itemSelector: 'article',
@@ -12,6 +13,6 @@ jQuery(function ($) {
   });
 
   $(document.body).bind("post-load", function (event) {
-    $('#content').masonry("reload");
-  })
+    $('#content').masonry("appended", $('#content').find("article:not(.masonry-brick)"), true);
+  });
 });
