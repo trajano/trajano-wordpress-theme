@@ -60,7 +60,6 @@ class TwpThemeOptions
       'settings' => "trajano_sidebar_location",
       'type' => 'select',
       'choices' => array (
-        "none" => __("No sidebar"),
         "left" => __("Sidebar on the left"),
         "right" => __("Sidebar on the right")
       )
