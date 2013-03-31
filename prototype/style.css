@@ -1,0 +1,84 @@
+.widecolumn article h1 {
+  font-size: 130%;
+}
+
+.widecolumn article {
+  margin-bottom: 10px;
+}
+
+.widecolumn article .thumbnail a {
+  border-width: 0px;
+}
+
+.widecolumn article .thumbnail img {
+  height: 150px;
+  border: 0px;
+  width: 100%;
+  display: block;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.narrowcolumn .thumbnail {
+  margin-bottom: 10px;
+}
+
+.narrowcolumn .thumbnail img {
+  width: 100%;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.hero-unit .thumbnail {
+  float: right;
+}
+
+.hero-unit .thumbnail img {
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#sidebars .accordion-inner > ul {
+  padding-left: 0px;
+  margin-left: 0px;
+  list-style: none;
+}
+
+#sidebars .accordion-inner select {
+  width: 100%;
+}
+
+.widget_categories .accordion-inner > ul > li {
+  padding-left: 0px;
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+
+@media (max-width: 767px) {
+
+  .hero-unit .thumbnail {
+    float: none;
+  }
+
+  .hero-unit .thumbnail img {
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  header {
+    position: fixed !important;
+    width: 100%;
+  }
+
+}

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>single page layout</title>
+
+    <script type='text/javascript' src='../js/jquery-1.9.1.js'></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/jquery.masonry.js"></script>
+
+    <script type="text/javascript" src="scripts.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-responsive.css"/>
+    <link rel="stylesheet" type="text/css" href="../fontawesome/css/font-awesome.css"/>
+
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+
+</head>
+<body>
+<header class="navbar navbar-inverse navbar-header navbar-static-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#"><i class="icon-home icon-white"> </i> Project name</a>
+
+            <div class="nav-collapse pull-right">
+                <ul class="nav">
+                    <li>
+                        <form class="navbar-search ">
+                            <div class="input-append">
+                                <input type="text" name="s" placeholder="Search&#8230;"/>
+                                <span class="btn"><i class="icon-search"> </i></span>
+                            </div>
+                        </form>
+                    </li>
+                    <li><a href="#"><i class="icon-rss icon-white"> </i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="container narrowcolumn" id="content">
+<div class="row">
+    <a class="thumbnail" href="http://site.trajano.net/">
+        <img style="background-image: url('http://lorempixel.com/400/200/sports/2')"/>
+    </a>
+</div>
+<div class="row">
+
+<article class="span9">
+    <h1><a href="http://site.trajano.net/">Heading 1</a></h1>
+
+    <p class="meta text-info">
+        <small>
+            <i class="icon-calendar"> </i> Jan 6, 2013
+        </small>
+    </p>
+    <p class="meta text-info">
+        <small><i class="icon-folder-open"> </i> Category: <a href="#">Techy</a></small>
+    </p>
+    <p class="meta text-info">
+        <small><i class="icon-tags"> </i> Tags: <a href="#">mongodb</a>, <a href="#">t430</a></small>
+    </p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum est viverra ante mattis
+        consectetur eleifend nibh tempor. In hac habitasse platea dictumst. Donec eget libero tortor, ac ultricies
+        arcu. Sed non dictum erat. Vivamus dolor mi, pulvinar sed posuere et, hendrerit vitae neque. Donec sit amet
+        dui vel massa facilisis convallis eget sed odio. Fusce auctor posuere elementum. Pellentesque ut justo
+        quam.</p>
+
+    <p>Vivamus lacinia sollicitudin eros, in ultricies nulla consequat ac. Vestibulum ante ipsum primis in faucibus
+        orci luctus et ultrices posuere cubilia Curae; Quisque purus ligula, congue in egestas ut, dictum nec sem.
+        Integer fermentum pretium lectus nec varius. Nulla augue diam, tincidunt a viverra eu, cursus eu tortor.
+        Aliquam sit amet augue erat. Morbi nibh elit, sagittis quis molestie ut, euismod ut dui. Sed nec augue
+        turpis, eu scelerisque nisl. Mauris pretium vulputate justo, non fringilla urna mattis sit amet. Quisque in
+        ligula risus, a tincidunt purus. Vivamus ultrices odio mollis lectus pretium nec varius arcu adipiscing.</p>
+
+    <p>Nullam hendrerit vehicula orci in ultrices. Curabitur eget tortor non elit rutrum iaculis. Suspendisse vitae
+        mauris magna. Pellentesque tempor nibh aliquam mi tempus semper. Vestibulum ante felis, ultricies eget
+        ultricies eu, gravida vitae eros. Aenean rhoncus tincidunt urna, ut consequat dui interdum vel. Mauris
+        varius, enim sed molestie tempus, arcu sapien consectetur ante, et ullamcorper eros nisl quis magna. Mauris
+        convallis, odio eu luctus placerat, tellus elit dignissim ipsum, nec condimentum urna sapien ac eros. Morbi
+        libero diam, imperdiet in scelerisque id, sodales id arcu. Pellentesque vel mi ipsum, sit amet ullamcorper
+        mauris. Integer nulla lorem, faucibus egestas molestie ac, scelerisque non diam. Mauris feugiat dui id
+        lectus gravida non lobortis mi varius. Cras laoreet arcu vel diam rhoncus eu egestas augue lobortis. Etiam
+        volutpat elit at dui tempus laoreet. Curabitur nec elit leo, sed blandit nisi.</p>
+
+    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut ut mauris sit
+        amet lacus fermentum dignissim eget quis tortor. Suspendisse venenatis tristique tortor, nec laoreet ante
+        venenatis eget. In sed enim ac massa consequat viverra vel congue mauris. Suspendisse gravida porta
+        ultricies. Curabitur lacus neque, laoreet a ultrices viverra, hendrerit nec magna. Vestibulum ante ipsum
+        primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec dictum mauris vitae risus eleifend
+        sed scelerisque quam pretium. Cras vestibulum, leo ac dapibus placerat, mi libero tempus magna, at porttitor
+        diam sapien id orci. Phasellus pharetra adipiscing libero eu elementum. Fusce accumsan dignissim fermentum.
+        Ut in diam ut tellus lobortis lobortis ac sit amet lorem.</p>
+
+    <p>Mauris rhoncus quam vitae sapien tempus id hendrerit augue rutrum. Aenean ornare fermentum egestas.
+        Suspendisse rhoncus eleifend nulla ut ullamcorper. Suspendisse potenti. Morbi sodales luctus ipsum, in
+        volutpat ligula pulvinar sit amet. Aenean non felis erat, ac aliquet augue. Phasellus vitae eleifend nisi.
+        In eu odio vel orci ullamcorper lacinia eu nec nisl. Maecenas urna nulla, commodo quis semper vitae, varius
+        vitae justo. Sed lacinia augue in mi vestibulum fringilla. Mauris vestibulum consectetur pellentesque.
+        Suspendisse sit amet tellus dui. Pellentesque eu mauris eget diam tempus porttitor. Donec dolor urna, luctus
+        at sagittis sit amet, posuere sit amet tellus. Aliquam auctor mollis odio, vel varius velit vehicula nec.
+        Integer nunc mauris, ullamcorper id laoreet vehicula, tincidunt a ipsum.</p>
+
+    <div class="btn-group"><a href="#" class="btn btn-primary btn-large">
+        Read more
+    </a><span class="btn btn-large">1 comment and 0 reactions</span></div>
+</article>
+<aside class="span3" id="sidebars">
+    <div class="accordion ">
+
+        <div class="accordion-group widget_categories" id="categories-2">
+            <div class="accordion-heading"><a href="#group-1" data-parent="#accordions"
+                                              data-toggle="collapse" class="accordion-toggle">Accordion Group 1</a>
+
+            </div>
+            <div id="group-1" class="accordion-body collapse in">
+                <div class="accordion-inner">
+                    <ul>
+                        <li class="cat-item cat-item-9"><a href="http://wp.trajano.net/category/android/"
+                                                           title="View all posts filed under android">android</a>
+                        </li>
+                        <li class="cat-item cat-item-20"><a href="http://wp.trajano.net/category/architecture/"
+                                                            title="View all posts filed under architecture">architecture</a>
+                        </li>
+                        <li class="cat-item cat-item-27"><a
+                                href="http://wp.trajano.net/category/behaviour-driven-development/"
+                                title="View all posts filed under behaviour driven development">behaviour driven
+                            development</a>
+                        </li>
+                        <li class="cat-item cat-item-18"><a href="http://wp.trajano.net/category/cassandra/"
+                                                            title="View all posts filed under cassandra">cassandra</a>
+                        </li>
+                        <li class="cat-item cat-item-17"><a href="http://wp.trajano.net/category/cdi/"
+                                                            title="View all posts filed under cdi">cdi</a>
+                        </li>
+                        <li class="cat-item cat-item-33"><a href="http://wp.trajano.net/category/crowdsourcing/"
+                                                            title="View all posts filed under crowdsourcing">crowdsourcing</a>
+                        </li>
+                        <li class="cat-item cat-item-21"><a
+                                href="http://wp.trajano.net/category/enterprise-architecture/"
+                                title="View all posts filed under enterprise architecture">enterprise
+                            architecture</a>
+                        </li>
+                        <li class="cat-item cat-item-24"><a href="http://wp.trajano.net/category/food/"
+                                                            title="View all posts filed under food">food</a>
+                        </li>
+                        <li class="cat-item cat-item-25"><a href="http://wp.trajano.net/category/hadoop/"
+                                                            title="View all posts filed under hadoop">hadoop</a>
+                        </li>
+                        <li class="cat-item cat-item-19"><a href="http://wp.trajano.net/category/hbase/"
+                                                            title="View all posts filed under hbase">hbase</a>
+                        </li>
+                        <li class="cat-item cat-item-31"><a href="http://wp.trajano.net/category/hockey/"
+                                                            title="View all posts filed under hockey">hockey</a>
+                        </li>
+                        <li class="cat-item cat-item-16"><a href="http://wp.trajano.net/category/java/"
+                                                            title="View all posts filed under java">java</a>
+                        </li>
+                        <li class="cat-item cat-item-30"><a href="http://wp.trajano.net/category/jee/"
+                                                            title="View all posts filed under jee">jee</a>
+                        </li>
+                        <li class="cat-item cat-item-29"><a href="http://wp.trajano.net/category/jpa/"
+                                                            title="View all posts filed under jpa">jpa</a>
+                        </li>
+                        <li class="cat-item cat-item-22"><a href="http://wp.trajano.net/category/maven/"
+                                                            title="View all posts filed under maven">maven</a>
+                        </li>
+                        <li class="cat-item cat-item-32"><a href="http://wp.trajano.net/category/moneyball/"
+                                                            title="View all posts filed under moneyball">moneyball</a>
+                        </li>
+                        <li class="cat-item cat-item-8"><a href="http://wp.trajano.net/category/mongodb/"
+                                                           title="View all posts filed under mongodb">mongodb</a>
+                        </li>
+                        <li class="cat-item cat-item-6"><a href="http://wp.trajano.net/category/nosql/"
+                                                           title="View all posts filed under nosql">nosql</a>
+                        </li>
+                        <li class="cat-item cat-item-23"><a href="http://wp.trajano.net/category/osgi/"
+                                                            title="View all posts filed under osgi">osgi</a>
+                        </li>
+                        <li class="cat-item cat-item-7"><a href="http://wp.trajano.net/category/programming/"
+                                                           title="View all posts filed under programming">programming</a>
+                        </li>
+                        <li class="cat-item cat-item-28"><a href="http://wp.trajano.net/category/scala/"
+                                                            title="View all posts filed under scala">scala</a>
+                        </li>
+                        <li class="cat-item cat-item-36"><a href="http://wp.trajano.net/category/series/"
+                                                            title="View all posts filed under Series">Series</a>
+                            <ul class='children'>
+                                <li class="cat-item cat-item-37"><a
+                                        href="http://wp.trajano.net/category/series/mapreduce-with-mongodb/"
+                                        title="View all posts filed under MapReduce with MongoDB">MapReduce with
+                                    MongoDB</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="cat-item cat-item-41"><a href="http://wp.trajano.net/category/soft-skills/"
+                                                            title="View all posts filed under Soft Skills">Soft
+                            Skills</a>
+                        </li>
+                        <li class="cat-item cat-item-2"><a href="http://wp.trajano.net/category/techy/"
+                                                           title="View all posts filed under Techy">Techy</a>
+                        </li>
+                        <li class="cat-item cat-item-26"><a href="http://wp.trajano.net/category/testing/"
+                                                            title="View all posts filed under testing">testing</a>
+                        </li>
+                        <li class="cat-item cat-item-13"><a href="http://wp.trajano.net/category/hmm/"
+                                                            title="View all posts filed under Things that make me go hmm&#8230;">Things
+                            that make me go hmm&#8230;</a>
+                        </li>
+                        <li class="cat-item cat-item-10"><a href="http://wp.trajano.net/category/ubuntu/"
+                                                            title="View all posts filed under ubuntu">ubuntu</a>
+                        </li>
+                        <li class="cat-item cat-item-1"><a href="http://wp.trajano.net/category/uncategorized/"
+                                                           title="View all posts filed under Uncategorized">Uncategorized</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-group">
+            <div class="accordion-heading"><a href="#group-2" data-parent="#accordions"
+                                              data-toggle="collapse" class="accordion-toggle">Accordion Group 2</a>
+
+            </div>
+            <div id="group-2" class="accordion-body collapse in">
+                <div class="accordion-inner">
+                    <div class="tagcloud"><a href='http://wp.trajano.net/tag/android/' class='tag-link-9'
+                                             title='1 topic' style='font-size: 8pt;'>android</a>
+                        <a href='http://wp.trajano.net/tag/comedy/' class='tag-link-15' title='1 topic'
+                           style='font-size: 8pt;'>comedy</a>
+                        <a href='http://wp.trajano.net/tag/friendship/' class='tag-link-38' title='1 topic'
+                           style='font-size: 8pt;'>friendship</a>
+                        <a href='http://wp.trajano.net/tag/meetings/' class='tag-link-34' title='1 topic'
+                           style='font-size: 8pt;'>meetings</a>
+                        <a href='http://wp.trajano.net/tag/mongodb/' class='tag-link-8' title='4 topics'
+                           style='font-size: 22pt;'>mongodb</a>
+                        <a href='http://wp.trajano.net/tag/nosql/' class='tag-link-6' title='4 topics'
+                           style='font-size: 22pt;'>nosql</a>
+                        <a href='http://wp.trajano.net/tag/programming/' class='tag-link-7' title='4 topics'
+                           style='font-size: 22pt;'>programming</a>
+                        <a href='http://wp.trajano.net/tag/t430/' class='tag-link-39' title='2 topics'
+                           style='font-size: 14.3pt;'>t430</a>
+                        <a href='http://wp.trajano.net/tag/thinkpad/' class='tag-link-40' title='2 topics'
+                           style='font-size: 14.3pt;'>thinkpad</a>
+                        <a href='http://wp.trajano.net/tag/tv/' class='tag-link-14' title='1 topic'
+                           style='font-size: 8pt;'>tv</a>
+                        <a href='http://wp.trajano.net/tag/user-interface/' class='tag-link-12' title='1 topic'
+                           style='font-size: 8pt;'>user interface</a>
+                        <a href='http://wp.trajano.net/tag/windows/' class='tag-link-11' title='1 topic'
+                           style='font-size: 8pt;'>windows</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-group">
+            <div class="accordion-heading"><a href="#group-4" data-parent="#accordions"
+                                              data-toggle="collapse" class="accordion-toggle">Accordion Group 4</a>
+
+            </div>
+            <div id="group-4" class="accordion-body collapse in">
+                <div class="accordion-inner">
+                    <select name="archive-dropdown"
+                            onchange='document.location.href=this.options[this.selectedIndex].value;'>
+                        <option value="">Select Month</option>
+                        <option value='http://wp.trajano.net/2013/03/'> March 2013 &#160;(6)</option>
+                        <option value='http://wp.trajano.net/2013/02/'> February 2013 &#160;(1)</option>
+                        <option value='http://wp.trajano.net/2012/12/'> December 2012 &#160;(2)</option>
+                        <option value='http://wp.trajano.net/2012/10/'> October 2012 &#160;(2)</option>
+                        <option value='http://wp.trajano.net/2012/08/'> August 2012 &#160;(5)</option>
+                        <option value='http://wp.trajano.net/2012/07/'> July 2012 &#160;(2)</option>
+                        <option value='http://wp.trajano.net/2012/06/'> June 2012 &#160;(3)</option>
+                        <option value='http://wp.trajano.net/2012/05/'> May 2012 &#160;(3)</option>
+                        <option value='http://wp.trajano.net/2012/04/'> April 2012 &#160;(3)</option>
+                        <option value='http://wp.trajano.net/2012/03/'> March 2012 &#160;(4)</option>
+                        <option value='http://wp.trajano.net/2012/02/'> February 2012 &#160;(4)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</aside>
+</div>
+</section>
+<footer>
+</footer>
+</body>
+</html>
