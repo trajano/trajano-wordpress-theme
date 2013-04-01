@@ -11,17 +11,12 @@
     <p class="meta text-info">
       <small>
         <i class="icon-calendar"> </i> <?php the_date(); ?>
+        <i class="icon-folder-open"> </i> <?php echo _("Category: "); the_category(_(", "))?></small>
+      <?php if (has_tag()): ?>
+        <i class="icon-tags"> </i> <?php the_tags(_("Tags: "), _(", ")) ?>
+      <?php endif ?>
       </small>
     </p>
-    <p class="text-info">
-      <small><i class="icon-folder-open"> </i> <?php echo _("Category: "); the_category(_(", "))?></small>
-    </p>
-    <?php if (has_tag()): ?>
-      <p class="text-info">
-        <small><i class="icon-tags"> </i> <?php the_tags(_("Tags: "), _(", "))?></small>
-      </p>
-    <?php endif ?>
-
     <?php the_excerpt() ?>
 
     <div class="btn-group"><a href="<?php the_permalink(); ?>" class="btn btn-primary btn-large">

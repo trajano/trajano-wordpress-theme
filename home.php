@@ -4,22 +4,21 @@ wp_enqueue_script("twp-enable-masonry", get_template_directory_uri() . "/js/enab
 get_header();
 ?>
 <section class="container">
+  <?php
+  the_post();
+  get_template_part('content/hero-unit', get_post_format());
+  ?>
   <div class="row">
     <?php twp_sidebar("left"); ?>
     <div class="<?php twp_posts_classes() ?>">
-      <?php if (have_posts()) :
-        the_post();
-        get_template_part('content/hero-unit', get_post_format());
+      <div class="row widecolumn" id="content">
+        <?php
+        while (have_posts()) {
+          the_post();
+          get_template_part('content', get_post_format());
+        }
         ?>
-        <div class="row widecolumn" id="content">
-          <?php
-          while (have_posts()) {
-            the_post();
-            get_template_part('content', get_post_format());
-          }
-          ?>
-        </div>
-      <?php endif ?>
+      </div>
     </div>
     <?php twp_sidebar("right"); ?>
   </div>
