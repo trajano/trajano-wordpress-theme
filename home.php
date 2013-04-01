@@ -1,26 +1,16 @@
 <?php
-wp_enqueue_script("twp-enable-masonry", get_template_directory_uri() . "/js/enable-masonry.js",
-  array ("jquery-masonry"));
-get_header();
-?>
-<section class="container">
-  <?php
-  the_post();
-  get_template_part('content/hero-unit', get_post_format());
+if (is_paged()) :
+  get_template_part('index', get_post_format()); else :
+  wp_enqueue_script("twp-enable-masonry", get_template_directory_uri() . "/js/enable-masonry.js",
+    array ("jquery-masonry"));
+  get_header();
   ?>
-  <div class="row">
-    <?php twp_sidebar("left"); ?>
-    <div class="<?php twp_posts_classes() ?>">
-      <div class="row widecolumn" id="content">
-        <?php
-        while (have_posts()) {
-          the_post();
-          get_template_part('content', get_post_format());
-        }
-        ?>
-      </div>
-    </div>
-    <?php twp_sidebar("right"); ?>
-  </div>
-</section>
-<?php get_footer(); ?>
+  <section class="container">
+    <?php
+    the_post();
+    get_template_part('content/hero-unit', get_post_format());
+    get_template_part('content/loop', get_post_format());
+    ?>
+  </section>
+  <?php get_footer();
+endif;
