@@ -22,16 +22,17 @@
         </a>
         <a class="brand" href="<?php bloginfo('url'); ?>"><?php twp_home_icon_image(); bloginfo('name'); ?></a>
 
-        <div class="pull-right">
-          <form class="navbar-search" action="?php bloginfo('url'); ?>">
-            <div class="input-append">
-              <input type="text" name="s" placeholder="<?php _e('Search'); ?>">
-              <span class="btn"><i class="icon-search"> </i></span>
-            </div>
-          </form>
-          <ul class="nav nav-collapse">
-            <li><a href="<?php echo get_bloginfo_rss('rss2_url'); ?>"><i class="icon-rss icon-white"> </i></a></li>
+        <div class="nav-collapse pull-right">
+          <ul class="nav">
+            <li>
+              <form class="navbar-search" action="?php bloginfo('url'); ?>">
+                <div class="input-append">
+                  <input type="text" name="s" placeholder="<?php _e('Search'); ?>">
+                  <span class="btn"><i class="icon-search"> </i></span>
+                </div>
+              </form>
             </li>
+            <li><a href="<?php echo get_bloginfo_rss('rss2_url'); ?>"><i class="icon-rss icon-white"> </i></a></li>
           </ul>
         </div>
       </div>
