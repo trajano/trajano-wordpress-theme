@@ -95,6 +95,18 @@ function twp_dynamic_sidebar($index = 1)
 }
 
 /**
+ * Displays a link to edit the post if the user is authorized to do so.
+ * @param string classes to add to the link.
+ */
+function twp_edit_post_link($class = "")
+{
+  if (current_user_can("edit_post", the_ID())) {
+    echo sprintf("<a href='%s' class='%s'><i class='icon-pencil'> </i> %s</a>", get_edit_post_link(), $class,
+      _("Edit"));
+  }
+}
+
+/**
  * Displays the featured image as a background.
  */
 function twp_featured_image()

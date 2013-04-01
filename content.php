@@ -19,9 +19,20 @@
           <i class="icon-tags"> </i><?php the_tags("", _(", ")) ?>
         <?php endif ?>
         <span class="nowrap"><i class="icon-comments"> </i><?php comments_popup_link(_("No comments"), _("One comment"),
-          _("% comments"), "",
-          _("Comments disabled")) ?></span></small>
+            _("% comments"), "",
+            _("Comments disabled")) ?></span></small>
     </p>
-    <a href="<?php the_permalink(); ?>" class="btn btn-small btn-block"><i class="icon-eye-open"> </i> Read more</a>
+
+    <?php if (current_user_can("edit_post", get_the_ID())) : ?>
+      <div class="btn-group">
+        <a href="<?php the_permalink(); ?>" class="btn btn-primary btn-small"><i
+              class="icon-eye-open"> </i><?php _e("Read more");?></a>
+        <?php twp_edit_post_link("btn btn-small"); ?>
+      </div>
+    <?php else : ?>
+      <a href="<?php the_permalink(); ?>" class="btn btn-small btn-block"><i
+            class="icon-eye-open"> </i> <?php _e("Read more");?></a>
+    <?php endif ?>
+
   </div>
 </article>
