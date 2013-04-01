@@ -4,7 +4,7 @@
       <i class="icon-calendar"> </i> <?php the_time('F j, Y'); ?>
     </button>
     <?php if (has_post_thumbnail()): ?>
-      <a href="<?php the_permalink(); ?>"><?php twp_featured_image(); ?></a>
+      <a href="<?php the_permalink(); ?>"><?php twp_featured_image("large"); ?></a>
     <?php endif ?>
 
     <h1><a href="<?php the_permalink(); ?>"

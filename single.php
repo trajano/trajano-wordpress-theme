@@ -1,10 +1,13 @@
-<?php get_header(); the_post(); ?>
+<?php
+wp_enqueue_script("twp-enable-imagebox", get_template_directory_uri() . "/js/enable-imagebox.js",
+  array ("jquery-colorbox"));
+get_header();
+the_post(); ?>
 <section id="post-<?php the_ID(); ?>" <?php post_class(array ("container", "narrowcolumn"));?>>
-  <?php if (has_post_thumbnail()): ?>
+  <?php if (has_post_thumbnail()):
+    $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id(), "full")?>
     <div class="row">
-      <a class="thumbnail" href="<?php the_permalink(); ?>">
-        <?php twp_featured_image(); ?>
-      </a>
+      <a class="thumbnail" href="<?php echo $featured_image[0]?>"><?php twp_featured_image("full"); ?></a>
     </div>
   <?php endif ?>
   <div class="row">
@@ -29,8 +32,9 @@
         </p>
       <?php endif ?>
 
-      <?php the_content(); ?>
-
+      <div class="storycontent">
+        <?php the_content(); ?>
+      </div>
       <?php comments_template('', true); ?>
 
     </article>

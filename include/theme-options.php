@@ -25,6 +25,18 @@ class TwpThemeOptions
       'choices' => $this->getBootswatchThemes()
     ));
 
+    $wp_customize->add_setting("trajano_colorbox_css", array (
+      "default" => "colorbox/example1/colorbox.css",
+      "transport" => "postMessage"
+    ));
+    $wp_customize->add_control("colorbox_css", array (
+      'label' => __('Colorbox style'),
+      'section' => 'colors',
+      'settings' => "trajano_colorbox_css",
+      'type' => 'select',
+      'choices' => $this->getColorboxThemes()
+    ));
+
     $wp_customize->add_setting("trajano_feature_background_image", array (
       "default" => ""
     ));
@@ -78,6 +90,23 @@ class TwpThemeOptions
       $bootswatchThemes[$cssFile] = $path;
     }
     return $bootswatchThemes;
+  }
+
+  private function getColorboxThemes()
+  {
+    $themes = array ();
+    $dir = opendir(get_template_directory() . "/colorbox");
+    while ($path = readdir($dir)) {
+      if ($path == "LICENSE" || $path == "." || $path == ".." || $path == "default" || $path == "img") {
+        continue;
+      }
+      $cssFile = "colorbox/" . $path . "/colorbox.css";
+      if (!file_exists(get_template_directory() . "/" . $cssFile)) {
+        continue;
+      }
+      $themes[$cssFile] = $path;
+    }
+    return $themes;
   }
 }
 

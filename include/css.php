@@ -9,6 +9,7 @@
  */
 if (!is_admin()) {
   wp_enqueue_style("bootstrap", get_template_directory_uri() . "/" . get_theme_mod("trajano_bootstrap_css"));
+  wp_enqueue_style("colorbox", get_template_directory_uri() . "/" . get_theme_mod("trajano_colorbox_css"));
 
   $cssDir = opendir(get_template_directory() . "/css");
   while ($path = readdir($cssDir)) {

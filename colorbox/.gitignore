@@ -1,0 +1,7 @@
+content/
+colorbox.ai
+*.json
+*-min.js
+README.md
+*/index.html
+
