@@ -25,7 +25,7 @@
       </p>
       <?php if (has_tag()): ?>
         <p class="text-info">
-          <small><i class="icon-tags"> </i> <?php the_tags("", _(", "))?></small>
+          <small><i class="icon-tags"> </i> <?php the_tags(_("Tags: "), _(", "))?></small>
         </p>
       <?php endif ?>
 
