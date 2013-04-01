@@ -18,12 +18,10 @@
         <?php if (has_tag()): ?>
           <i class="icon-tags"> </i><?php the_tags("", _(", ")) ?>
         <?php endif ?>
-        <?php if (comments_open()): ?>
-          <span class="nowrap"><i class="icon-comments"> </i><?php comments_popup_link(_("No comments"),
-              _("One comment"),
-              _("% comments"), "",
-              _("Comments disabled")) ?></span>
-        <?php endif ?>
+        <span class="nowrap"><i class="icon-comments"> </i><?php comments_popup_link(_("No comments"),
+            _("One comment"),
+            _("% comments"), "",
+            _("Comments disabled")) ?></span>
       </small>
     </p>
 

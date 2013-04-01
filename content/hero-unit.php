@@ -23,11 +23,9 @@
         <i class="icon-eye-open"> </i><?php _e("Read more")?>
       </a>
       <?php
-      if (comments_open()) {
-        twp_edit_post_link("btn btn-large");
-        comments_popup_link(_("No comments"), _("One comment"), _("% comments"), "btn btn-large",
-          _("Comments disabled"));
-      }
+      twp_edit_post_link("btn btn-large");
+      comments_popup_link(_("No comments"), _("One comment"), _("% comments"), "btn btn-large",
+        _("Comments disabled"));
       ?>
     </div>
   </div>
