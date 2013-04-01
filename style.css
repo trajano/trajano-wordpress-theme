@@ -97,6 +97,10 @@ header {
   margin-bottom: 10px;
 }
 
+.infinite-loader {
+  display: none !important;
+}
+
 @media (min-width: 768px) and (max-width: 979px) {
 
 }
@@ -117,6 +121,7 @@ header {
 
   header {
     position: fixed !important;
+    z-index: 1000;
     width: 100%;
   }
 

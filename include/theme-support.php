@@ -17,7 +17,9 @@ function twp_add_theme_support()
     'default-text-color' => '',
     'uploads' => true,
   ));
-  add_theme_support('infinite-scroll');
+  add_theme_support('infinite-scroll', array (
+    'footer' => false
+  ));
   add_theme_support('post-thumbnails');
 }
 
