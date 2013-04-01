@@ -21,6 +21,7 @@
 
     <div class="btn-group"><a href="<?php the_permalink(); ?>" class="btn btn-primary btn-large">
         Read more
-      </a><span class="btn btn-large">1 comment and 0 reactions</span></div>
+      </a><?php comments_popup_link(_("No comments"), _("One comment"), _("% comments"), "btn btn-large",
+        _("Comments disabled")) ?></div>
   </div>
 </div>

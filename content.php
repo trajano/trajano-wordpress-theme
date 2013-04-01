@@ -22,7 +22,8 @@
       </p>
     <?php endif ?>
     <p class="text-info text-center">
-      <small>2 comments and 0 reactions</small>
+      <small><?php comments_popup_link(_("No comments"), _("One comment"), _("% comments"), "",
+          _("Comments disabled")) ?></small>
     </p>
     <a href="<?php the_permalink(); ?>" class="btn btn-small btn-block"><i class="icon-chevron-down"> </i> Read more</a>
   </div>
