@@ -5,7 +5,7 @@ wp_enqueue_script("twp-enable-masonry", get_template_directory_uri() . "/js/enab
 <div class="row">
   <?php twp_sidebar("left"); ?>
   <div class="<?php twp_posts_classes() ?>">
-    <div class="row widecolumn" id="content">
+    <div class="row multiple-posts" id="content">
       <?php
       while (have_posts()) {
         the_post();

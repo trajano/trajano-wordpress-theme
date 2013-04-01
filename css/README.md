@@ -58,7 +58,7 @@ of classes it will take advantage of WordPress generated classes as well.
 #content
 
 > This contains the content area of the page.  This follows the [WordPress content structure][wp-content] for the ID
-> and class declarations.  This includes the notion of "narrowcolumn" and "widecolumn" classes.
+> and class declarations.
 
 #content article
 
