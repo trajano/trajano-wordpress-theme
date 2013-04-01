@@ -14,17 +14,14 @@
     <?php the_excerpt() ?>
 
     <p class="text-info">
-      <small><i class="icon-folder-open"> </i> <?php the_category(_(", "))?></small>
+      <small><i class="icon-folder-open"> </i> <?php the_category(_(", "))?>
+        <?php if (has_tag()): ?>
+          <i class="icon-tags"> </i><?php the_tags("", _(", ")) ?>
+        <?php endif ?>
+        <span class="nowrap"><i class="icon-comments"> </i><?php comments_popup_link(_("No comments"), _("One comment"),
+          _("% comments"), "",
+          _("Comments disabled")) ?></span></small>
     </p>
-    <?php if (has_tag()): ?>
-      <p class="text-info">
-        <small><i class="icon-tags"> </i> <?php the_tags("", _(", "))?></small>
-      </p>
-    <?php endif ?>
-    <p class="text-info text-center">
-      <small><?php comments_popup_link(_("No comments"), _("One comment"), _("% comments"), "",
-          _("Comments disabled")) ?></small>
-    </p>
-    <a href="<?php the_permalink(); ?>" class="btn btn-small btn-block"><i class="icon-chevron-down"> </i> Read more</a>
+    <a href="<?php the_permalink(); ?>" class="btn btn-small btn-block"><i class="icon-eye-open"> </i> Read more</a>
   </div>
 </article>

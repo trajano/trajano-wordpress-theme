@@ -20,7 +20,7 @@
     <?php the_excerpt() ?>
 
     <div class="btn-group"><a href="<?php the_permalink(); ?>" class="btn btn-primary btn-large">
-        Read more
+        <i class="icon-eye-open"> </i> Read more
       </a><?php comments_popup_link(_("No comments"), _("One comment"), _("% comments"), "btn btn-large",
         _("Comments disabled")) ?></div>
   </div>

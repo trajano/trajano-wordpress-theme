@@ -89,6 +89,10 @@ header .brand img {
   padding-left: 0px;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 @media (min-width: 768px) and (max-width: 979px) {
 
 }
