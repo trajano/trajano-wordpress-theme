@@ -1,17 +1,14 @@
 "use strict";
-var masonrySettings = {
-  itemSelector: 'article',
-  isAnimated: true,
-  columnWidth: function (containerWidth) {
-    return containerWidth / 6;
-  }
-};
-
 jQuery(function ($) {
-
   function applyMasonry() {
     if ($(document).width() >= 768) {
-      $('#content').masonry(masonrySettings);
+      $('#content').masonry({
+        itemSelector: 'article',
+        isAnimated: true,
+        columnWidth: function (containerWidth) {
+          return containerWidth / 6;
+        }
+      });
     } else if ($('#content').hasClass("masonry") && $(document).width() < 768) {
       $('#content').masonry("destroy");
     }
