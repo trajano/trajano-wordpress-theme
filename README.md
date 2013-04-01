@@ -18,6 +18,9 @@ Technology used
 * Twitter Bootstrap
 * [Bootswatch][boots]
 * [Font Awesome][font]
+* [ColorBox][cbox]
+* [Masonry][masonry]
+* JetPack Infinite Scroll
 
 Folder structure
 ----------------
@@ -25,27 +28,32 @@ Folder structure
 > files that are used by WordPress directly.
 
 bootswatch/
-> [Bootswatch][boots] stylehseet files.
+> [Bootswatch][boots] files.
+
+colorbox/
+> [ColorBox][cbox] files.
 
 content/
-> PHP templates that are loaded based on the dispatch done by [content.php][content.php].
+> PHP templates.
 
 css/
-> stylesheet files that dynamically enqueue from [css.php][include/css.php].
+> stylesheet files that dynamically enqueue from <code>include/css.php</code>.
 
 fontawesome/
 > [Font Awesome][font] files
 
 include/
-> PHP modules that are dynamically loaded from [functions.php][functions.php].
+> PHP modules that are dynamically loaded from <code>functions.php</code>.
 
 js/
-> Javascript files that explicitly enqueue from [javascript.php][include/javascript.php] and other places where
+> Javascript files that explicitly enqueue from <code>include/javascript.php</code> and other places where
 > specific Javascript functionality is required.
 
 
+[boots]: http://bootswatch.com/
+[cbox]: http://www.jacklmoore.com/colorbox/
+[font]: http://fortawesome.github.com/Font-Awesome/
+[is]: http://jetpack.me/support/infinite-scroll/
+[masonry]: http://masonry.desandro.com/
 [rwd]: http://en.wikipedia.org/wiki/Responsive_web_design
 [w3tc]: http://wordpress.org/extend/plugins/w3-total-cache/
-[is]: http://jetpack.me/support/infinite-scroll/
-[font]: http://fortawesome.github.com/Font-Awesome/
-[boots]: http://bootswatch.com/
