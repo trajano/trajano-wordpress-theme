@@ -37,15 +37,6 @@ class TwpThemeOptions
       'choices' => $this->getColorboxThemes()
     ));
 
-    $wp_customize->add_setting("trajano_feature_background_image", array (
-      "default" => ""
-    ));
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'feature_background_image', array (
-      "label" => __("Feature article background"),
-      "section" => "colors",
-      "settings" => "trajano_feature_background_image"
-    )));
-
     /*
      * Site navigation section
      */
