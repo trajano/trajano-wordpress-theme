@@ -1,13 +1,14 @@
 <?php
-wp_enqueue_script("twp-enable-masonry", get_template_directory_uri() . "/js/enable-masonry.js", array("jquery-masonry"));
+wp_enqueue_script("twp-enable-masonry", get_template_directory_uri() . "/js/enable-masonry.js",
+  array ("jquery-masonry"));
 get_header();
 ?>
-<div class="container">
+<section class="container">
   <div class="row">
     <?php twp_sidebar("left"); ?>
-    <div id="mainArea" class="<?php twp_posts_classes() ?>">
+    <div class="<?php twp_posts_classes() ?>">
       <?php if (have_posts()) : ?>
-        <div id="content">
+        <div class="row widecolumn" id="content">
           <?php
           while (have_posts()) {
             the_post();
@@ -15,9 +16,9 @@ get_header();
           }
           ?>
         </div>
-      <?php endif      ?>
+      <?php endif ?>
     </div>
     <?php twp_sidebar("right"); ?>
   </div>
-</div>
+</section>
 <?php get_footer(); ?>

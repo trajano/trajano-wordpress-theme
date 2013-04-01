@@ -42,15 +42,6 @@ class TwpThemeOptions
       'priority' => 90,
     ));
 
-    $wp_customize->add_setting("trajano_home_icon_image", array (
-      "default" => ""
-    ));
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'home_icon_image', array (
-      "label" => __("Home icon image"),
-      "section" => "siteNav",
-      "settings" => "trajano_home_icon_image"
-    )));
-
     $wp_customize->add_setting("trajano_sidebar_location", array (
       "default" => "right"
     ));
@@ -108,7 +99,7 @@ function twp_customize_register($wp_customize)
  */
 function twp_enqueue_theme_customizer_script()
 {
-  wp_enqueue_script("theme-customizer", get_template_directory_uri() . "/js/theme-customizer.js", array("jquery"));
+  wp_enqueue_script("theme-customizer", get_template_directory_uri() . "/js/theme-customizer.js", array ("jquery"));
 }
 
 add_action("customize_register", "twp_customize_register");

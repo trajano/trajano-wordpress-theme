@@ -18,83 +18,98 @@ the load.
 */
 
 /* Ensure the image on the brand is aligned well */
-#siteNav .navbar .brand img {
+header .brand img {
   vertical-align: middle;
   margin-right: 0.5em;
 }
 
-/* Sidebar widget overrides. */
-#sidebar .widget {
-  margin-bottom: 40px;
+.widecolumn article h1 {
+  font-size: 17.5px;
+  line-height: 20px;
+  overflow: hidden;
 }
 
-#sidebar .widget a {
-  text-decoration: none;
+.widecolumn article p {
+  overflow: hidden;
 }
 
-#sidebar .widget h2 {
-  font-size: 14px;
-  border-bottom: 1px solid;
-  line-height: 28px;
-  text-transform: uppercase;
+.widecolumn article {
+  margin-bottom: 10px;
 }
 
-#sidebar .widget ul {
-  padding-right: 0;
-  padding-left: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  list-style: none inside none;
+.widecolumn article .thumbnail a {
+  border-width: 0px;
 }
 
-#sidebar .widget ul ul {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-bottom: 0;
-  margin-left: 0;
+.widecolumn article .thumbnail img {
+  height: 150px;
+  border: 0px;
+  width: 100%;
+  display: block;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.narrowcolumn .thumbnail {
+  margin-bottom: 10px;
+}
+
+.narrowcolumn .thumbnail img {
+  width: 100%;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.hero-unit .thumbnail {
+  float: right;
+}
+
+.hero-unit .thumbnail img {
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#sidebars .accordion-inner > ul {
+  padding-left: 0px;
+  margin-left: 0px;
   list-style: none;
 }
 
-#sidebar .widget ul > li:hover {
-  border-radius: 10px;
-  overflow: inherit;
-  background-color: #dddddd;
+#sidebars .accordion-inner select {
+  width: 100%;
 }
 
-#sidebar .widget ul ul > li:hover {
-  border-radius: 10px;
-  background-color: #22dddd;
+.widget_categories .accordion-inner > ul > li {
+  padding-left: 0px;
 }
 
-#sidebar .widget ul > li > a,
-#sidebar .widget ul ul > li > a,
-#sidebar .widget ul ul ul > li > a {
-  display: block;
-  padding: 3px 15px;
+@media (min-width: 768px) and (max-width: 979px) {
+
 }
 
-/* Tag cloud widget */
-.tagcloud {
-  padding-top: 10px;
-}
+@media (max-width: 767px) {
 
-.tagcloud a {
-  padding: 10px;
-  white-space: nowrap;
-}
+  .hero-unit .thumbnail {
+    float: none;
+  }
 
-.tagcloud a:hover,
-.tagcloud a:focus {
-  background-color: #dddddd;
-  border-radius: 10px;
-}
+  .hero-unit .thumbnail img {
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+  }
 
-/* Content area when there are multiple posts */
-.blog #content article {
-  width: 220px;
-  float: left;
-}
+  header {
+    position: fixed !important;
+    width: 100%;
+  }
 
-.blog #content article .entry-excerpt {
-  overflow: hidden;
 }

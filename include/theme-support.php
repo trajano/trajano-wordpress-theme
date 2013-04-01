@@ -4,7 +4,21 @@
  */
 function twp_add_theme_support()
 {
+  add_theme_support('automatic-feed-links');
+  add_theme_support('custom-background');
+  add_theme_support('custom-header', array (
+    'default-image' => '',
+    'width' => 20,
+    'height' => 20,
+    'flex-width' => true,
+    'flex-height' => true,
+    'random-default' => true,
+    'header-text' => false,
+    'default-text-color' => '',
+    'uploads' => true,
+  ));
   add_theme_support('infinite-scroll');
+  add_theme_support('post-thumbnails');
 }
 
 add_action('after_setup_theme', 'twp_add_theme_support');

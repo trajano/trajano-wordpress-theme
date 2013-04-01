@@ -1,7 +1,7 @@
 <?php if (is_active_sidebar('sidebar-1')) : ?>
-  <div id="sidebar" class="span2 well">
-    <ul class="nav navlist">
-      <?php dynamic_sidebar('sidebar-1'); ?>
-    </ul>
-  </div>
+  <aside class="span3" id="sidebars">
+    <div class="accordion">
+      <?php twp_dynamic_sidebar('sidebar-1'); ?>
+    </div>
+  </aside>
 <?php endif; ?>
