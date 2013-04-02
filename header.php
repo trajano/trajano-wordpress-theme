@@ -32,7 +32,14 @@
                 </div>
               </form>
             </li>
-            <li class="."><a href="<?php echo get_bloginfo_rss('rss2_url'); ?>"><i class="icon-rss icon-white"> </i></a></li>
+            <li class="visible-desktop"><a href="<?php echo get_bloginfo_rss('rss2_url'); ?>"><i
+                    class="icon-rss icon-white"> </i></a></li>
+            <?php
+            $widgets_page = get_page_by_title("_widgets");
+            if ($widgets_page && is_active_sidebar('sidebar-1')):
+              ?>
+              <li class="hidden-desktop"><a href="<?php echo get_page_link($widgets_page->ID); ?>"><i class="icon-rss icon-white"> </i></a></li>
+            <?php endif ?>
           </ul>
         </div>
       </div>
