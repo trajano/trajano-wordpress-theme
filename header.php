@@ -32,7 +32,7 @@
                 </div>
               </form>
             </li>
-            <li><a href="<?php echo get_bloginfo_rss('rss2_url'); ?>"><i class="icon-rss icon-white"> </i></a></li>
+            <li class="."><a href="<?php echo get_bloginfo_rss('rss2_url'); ?>"><i class="icon-rss icon-white"> </i></a></li>
           </ul>
         </div>
       </div>
