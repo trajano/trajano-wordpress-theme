@@ -16,9 +16,7 @@
     <div class="navbar-inner">
       <div class="container">
         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+          <span class="icon-align-justify"></span>
         </a>
         <a class="brand" href="<?php bloginfo('url'); ?>"><?php twp_home_icon_image(); bloginfo('name'); ?></a>
 
@@ -26,10 +24,7 @@
           <ul class="nav">
             <li>
               <form class="navbar-search" action="?php bloginfo('url'); ?>">
-                <div class="input-append">
-                  <input type="text" name="s" placeholder="<?php _e('Search'); ?>">
-                  <span class="btn"><i class="icon-search"> </i></span>
-                </div>
+                <input type="search" class="search-query" name="s" placeholder="<?php _e('Search'); ?>"/>
               </form>
             </li>
             <li class="visible-desktop"><a href="<?php echo get_bloginfo_rss('rss2_url'); ?>"><i
@@ -38,7 +33,7 @@
             $widgets_page = get_page_by_title("_widgets");
             if ($widgets_page && is_active_sidebar('sidebar-1')):
               ?>
-              <li class="hidden-desktop"><a href="<?php echo get_page_link($widgets_page->ID); ?>"><i class="icon-rss icon-white"> </i></a></li>
+              <li class="hidden-desktop"><a href="<?php echo get_page_link($widgets_page->ID); ?>">Sidebar</a></li>
             <?php endif ?>
           </ul>
         </div>

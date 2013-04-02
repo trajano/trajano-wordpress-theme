@@ -109,10 +109,12 @@ header {
 
 @media (max-width: 767px) {
 
-  #sidebars
+  #sidebars.span3 {
+    display: none;
+  }
+
   .hero-unit {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px;
   }
 
   .hero-unit .thumbnail {
