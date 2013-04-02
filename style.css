@@ -61,6 +61,10 @@ header .brand img {
   overflow: hidden;
 }
 
+.hero-unit {
+  overflow: hidden;
+}
+
 .hero-unit .thumbnail {
   float: right;
 }
@@ -104,6 +108,11 @@ header {
 }
 
 @media (max-width: 767px) {
+
+  .hero-unit {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
   .hero-unit .thumbnail {
     float: none;
