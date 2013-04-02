@@ -128,8 +128,14 @@ header {
 
   header {
     position: fixed !important;
+    padding: 0px;
+    margin: 0px;
     z-index: 1000;
     width: 100%;
+  }
+
+  header .navbar {
+    padding-right: 10px;
   }
 
 }
