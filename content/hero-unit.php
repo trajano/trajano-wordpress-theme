@@ -11,10 +11,14 @@
     <p class="meta text-info">
       <small>
         <i class="icon-calendar"> </i> <?php the_date(); ?>
-        <i class="icon-folder-open"> </i> <?php echo _("Category: "); the_category(_(", "))?></small>
-      <?php if (has_tag()): ?>
-        <i class="icon-tags"> </i> <?php the_tags(_("Tags: "), _(", ")) ?>
-      <?php endif ?>
+        <i class="icon-folder-open"> </i> <?php echo _("Category: "); the_category(_(", "))?>
+        <?php if (has_tag()): ?>
+          <i class="icon-tags"> </i> <?php the_tags(_("Tags: "), _(", ")) ?>
+        <?php endif ?>
+        <i class="icon-comments"> </i> <?php
+        comments_popup_link(_("No comments"), _("One comment"), _("% comments"), "visible-phone",
+          _("Comments disabled"));
+        ?>
       </small>
     </p>
     <?php the_excerpt() ?>
@@ -24,7 +28,7 @@
       </a>
       <?php
       twp_edit_post_link("btn btn-large");
-      comments_popup_link(_("No comments"), _("One comment"), _("% comments"), "btn btn-large",
+      comments_popup_link(_("No comments"), _("One comment"), _("% comments"), "btn btn-large hidden-phone",
         _("Comments disabled"));
       ?>
     </div>
