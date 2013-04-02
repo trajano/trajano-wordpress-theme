@@ -14,7 +14,7 @@ if (is_paged()) :
       </div>
       <?php get_template_part('content/random-loop'); ?>
     <?php else: ?>
-      <div class="alert alert-info">
+      <div class="alert alert-info alert-block">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
         <h4><i class="icon-search"> </i><?php _e("Search results for:"); ?> <em><?php the_search_query()?></em>
         </h4>
