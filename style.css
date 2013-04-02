@@ -109,6 +109,7 @@ header {
 
 @media (max-width: 767px) {
 
+  #sidebars
   .hero-unit {
     padding-left: 20px;
     padding-right: 20px;
@@ -124,18 +125,6 @@ header {
     background-position: center;
     background-size: cover;
     overflow: hidden;
-  }
-
-  header {
-    position: fixed !important;
-    padding: 0px;
-    margin: 0px;
-    z-index: 1000;
-    width: 100%;
-  }
-
-  header .navbar {
-    padding-right: 10px;
   }
 
 }
