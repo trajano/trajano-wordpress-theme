@@ -16,7 +16,7 @@
           <?php if (has_tag()): ?>
             <i class="icon-tags"> </i> <?php the_tags(_("Tags: "), _(", ")) ?>
           <?php endif ?>
-          <i class="icon-comments"> </i> <?php
+          <i class="icon-comments visible-phone"> </i> <?php
           comments_popup_link(_("No comments"), _("One comment"), _("% comments"), "visible-phone",
             _("Comments disabled"));
           ?>
