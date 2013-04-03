@@ -104,6 +104,14 @@ header {
   display: none !important;
 }
 
+header ul.nav li.dropdown:hover > ul.dropdown-menu {
+  display: block;
+}
+
+header .navbar .dropdown-menu {
+  margin-top: 0px;
+}
+
 @media (min-width: 768px) and (max-width: 979px) {
 
 }
@@ -133,6 +141,5 @@ header {
 }
 
 @media (max-width: 480px) {
-
 
 }

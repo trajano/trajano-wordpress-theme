@@ -20,6 +20,15 @@
         </a>
         <a class="brand" href="<?php bloginfo('url'); ?>"><?php twp_home_icon_image(); bloginfo('name'); ?></a>
 
+        <?php
+        wp_nav_menu(array (
+          'container' => false,
+          'menu_class' => 'nav',
+          'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+          'walker' => new TwpWalkerNavMenu(),
+          'theme_location' => 'header-menu'));
+        ?>
+
         <div class="nav-collapse pull-right">
           <ul class="nav">
             <li>
