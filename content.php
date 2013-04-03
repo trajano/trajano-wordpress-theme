@@ -14,7 +14,11 @@
     <?php the_excerpt() ?>
 
     <p class="text-info">
-      <small><i class="icon-folder-open"> </i> <?php the_category(_(", "))?>
+      <small>
+        <?php if (is_multi_author()): ?>
+          <i class="icon-user"> </i> <?php the_author_posts_link(); ?>
+        <?php endif ?>
+        <i class="icon-folder-open"> </i> <?php the_category(_(", "))?>
         <?php if (has_tag()): ?>
           <i class="icon-tags"> </i><?php the_tags("", _(", ")) ?>
         <?php endif ?>
