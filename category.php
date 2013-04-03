@@ -6,12 +6,11 @@ if (is_paged()) :
   get_header();
   ?>
   <section class="container">
+    <div class="alert alert-info alert-block">
+      <h4><i class="icon-folder-open"> </i><?php single_term_title()?></h4>
+      <?php echo category_description()?>
+    </div>
     <?php if (!have_posts()): ?>
-      <div class="alert alert-info alert-block">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        <h4><i class="icon-folder-open"> </i><?php single_term_title()?></h4>
-        <?php echo category_description()?>
-      </div>
       <div class="alert alert-block">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
         <h4><i class="icon-minus-sign"> </i><?php _e("No results found"); ?></h4>
@@ -19,11 +18,6 @@ if (is_paged()) :
       </div>
       <?php get_template_part('content/random-loop'); ?>
     <?php else: ?>
-      <div class="alert alert-info alert-block">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        <h4><i class="icon-folder-open"> </i><?php single_term_title()?></h4>
-        <?php echo category_description()?>
-      </div>
       <?php
       get_template_part('content/loop', get_post_format());
       ?>
