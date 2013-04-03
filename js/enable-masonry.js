@@ -4,7 +4,7 @@ jQuery(function ($) {
     if ($(document).width() >= 768) {
       $('#content').masonry({
         itemSelector: 'article',
-        isAnimated: true,
+        isAnimated: false,
         columnWidth: function (containerWidth) {
           return containerWidth / 6;
         }
