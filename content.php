@@ -1,7 +1,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(array ("span3"));?>>
   <div class="thumbnail">
     <button class="btn btn-small btn-block btn-inverse">
-      <i class="icon-calendar"> </i> <?php the_time('F j, Y'); ?>
+      <i class="icon-calendar"> </i> <?php the_time(_('F j, Y')); ?>
     </button>
     <?php if (has_post_thumbnail()): ?>
       <a href="<?php the_permalink(); ?>"><?php twp_featured_image("large"); ?></a>
