@@ -9,8 +9,7 @@
  */
 function twp_content_post_class()
 {
-
-  $columns = get_post_custom_values("columns");
+  $columns = get_post_meta(get_the_ID(), "twp_columns", true);
 
   if (is_active_sidebar('sidebar-1')) {
 
