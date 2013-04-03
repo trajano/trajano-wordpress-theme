@@ -9,6 +9,22 @@
  */
 function twp_content_post_class()
 {
+  if ((is_home() && !get_theme_mod("trajano_magazine_layout_home")) ||
+      (is_category() && !get_theme_mod("trajano_magazine_layout_category")) ||
+      (is_tag() && !get_theme_mod("trajano_magazine_layout_tag")) ||
+      (is_search() && !get_theme_mod("trajano_magazine_layout_search")) ||
+      (is_author() && !get_theme_mod("trajano_magazine_layout_author")) ||
+      (is_year() && !get_theme_mod("trajano_magazine_layout_date")) ||
+      (is_month() && !get_theme_mod("trajano_magazine_layout_date")) ||
+      (is_day() && !get_theme_mod("trajano_magazine_layout_date"))
+  ) {
+    if (is_active_sidebar('sidebar-1')) {
+      post_class(array ("span9"));
+    } else {
+      post_class(array ("span12"));
+    }
+    return;
+  }
   $columns = get_post_meta(get_the_ID(), "twp_columns", true);
 
   if (is_active_sidebar('sidebar-1')) {

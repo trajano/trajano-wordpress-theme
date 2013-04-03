@@ -11,15 +11,20 @@ class TwpThemeOptions
   public function registerOptions($wp_customize)
   {
     /*
-     * Colors section
+     * Styles & Layout section
      */
+    $wp_customize->add_section('styles', array (
+      'title' => __('Styles & Layout'),
+      'priority' => 90,
+    ));
+
     $wp_customize->add_setting("trajano_bootstrap_css", array (
       "default" => "css/bootstrap.css",
       "transport" => "postMessage"
     ));
     $wp_customize->add_control("bootstrap_css", array (
       'label' => __('Bootswatch style'),
-      'section' => 'colors',
+      'section' => 'styles',
       'settings' => "trajano_bootstrap_css",
       'type' => 'select',
       'choices' => $this->getBootswatchThemes()
@@ -31,18 +36,10 @@ class TwpThemeOptions
     ));
     $wp_customize->add_control("colorbox_css", array (
       'label' => __('Colorbox style'),
-      'section' => 'colors',
+      'section' => 'styles',
       'settings' => "trajano_colorbox_css",
       'type' => 'select',
       'choices' => $this->getColorboxThemes()
-    ));
-
-    /*
-     * Site navigation section
-     */
-    $wp_customize->add_section('siteNav', array (
-      'title' => __('Site navigation'),
-      'priority' => 90,
     ));
 
     $wp_customize->add_setting("trajano_sidebar_location", array (
@@ -50,13 +47,73 @@ class TwpThemeOptions
     ));
     $wp_customize->add_control("sidebar_location", array (
       'label' => __('Sidebar location'),
-      'section' => 'siteNav',
+      'section' => 'styles',
       'settings' => "trajano_sidebar_location",
       'type' => 'select',
       'choices' => array (
         "left" => __("Sidebar on the left"),
         "right" => __("Sidebar on the right")
       )
+    ));
+
+    $wp_customize->add_setting("trajano_magazine_layout_home", array (
+      "default" => true
+    ));
+    $wp_customize->add_control("magazine_layout_home", array (
+      'label' => __('Magazine layout on home page'),
+      'section' => 'styles',
+      'settings' => "trajano_magazine_layout_home",
+      'type' => 'checkbox'
+    ));
+
+    $wp_customize->add_setting("trajano_magazine_layout_search", array (
+      "default" => true
+    ));
+    $wp_customize->add_control("magazine_layout_search", array (
+      'label' => __('Magazine layout on search page'),
+      'section' => 'styles',
+      'settings' => "trajano_magazine_layout_search",
+      'type' => 'checkbox'
+    ));
+
+    $wp_customize->add_setting("trajano_magazine_layout_category", array (
+      "default" => true
+    ));
+    $wp_customize->add_control("magazine_layout_category", array (
+      'label' => __('Magazine layout on category page'),
+      'section' => 'styles',
+      'settings' => "trajano_magazine_layout_category",
+      'type' => 'checkbox'
+    ));
+
+    $wp_customize->add_setting("trajano_magazine_layout_tag", array (
+      "default" => true
+    ));
+    $wp_customize->add_control("magazine_layout_tag", array (
+      'label' => __('Magazine layout on tag page'),
+      'section' => 'styles',
+      'settings' => "trajano_magazine_layout_tag",
+      'type' => 'checkbox'
+    ));
+
+    $wp_customize->add_setting("trajano_magazine_layout_author", array (
+      "default" => true
+    ));
+    $wp_customize->add_control("magazine_layout_author", array (
+      'label' => __('Magazine layout on author page'),
+      'section' => 'styles',
+      'settings' => "trajano_magazine_layout_author",
+      'type' => 'checkbox'
+    ));
+
+    $wp_customize->add_setting("trajano_magazine_layout_date", array (
+      "default" => true
+    ));
+    $wp_customize->add_control("magazine_layout_date", array (
+      'label' => __('Magazine layout on dated archive page'),
+      'section' => 'styles',
+      'settings' => "trajano_magazine_layout_date",
+      'type' => 'checkbox'
     ));
   }
 
