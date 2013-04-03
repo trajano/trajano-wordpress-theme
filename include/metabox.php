@@ -36,6 +36,11 @@ function twp_magazine_appearance_box($post)
 
 function twp_magazine_appearance_box_save($post_id)
 {
+  if (!isset($_POST["twp_nonce"]) ||
+      !wp_verify_nonce($_POST["twp_nonce"], plugin_basename(__FILE__))
+  ) {
+    return;
+  }
   if ('page' == $_POST['post_type']) {
     if (!current_user_can('edit_page', $post_id)) {
       return;
@@ -44,11 +49,6 @@ function twp_magazine_appearance_box_save($post_id)
     if (!current_user_can('edit_post', $post_id)) {
       return;
     }
-  }
-  if (!isset($_POST["twp_nonce"]) ||
-      !wp_verify_nonce($_POST["twp_nonce"], plugin_basename(__FILE__))
-  ) {
-    return;
   }
   update_post_meta($_POST['post_ID'], "twp_columns", sanitize_text_field($_POST["twp_columns"]));
 }
