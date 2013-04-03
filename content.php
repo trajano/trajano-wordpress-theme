@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(array ("span3"));?>>
+<article id="post-<?php the_ID(); ?>" <?php twp_content_post_class();?>>
   <div class="thumbnail">
     <button class="btn btn-small btn-block btn-inverse">
       <i class="icon-calendar"> </i> <?php the_time(_('F j, Y')); ?>

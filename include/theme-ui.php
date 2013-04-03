@@ -5,6 +5,39 @@
  */
 
 /**
+ * Extends post_class method to add logic for handling column sizes based on meta data.
+ */
+function twp_content_post_class()
+{
+
+  $columns = get_post_custom_values("columns");
+
+  if (is_active_sidebar('sidebar-1')) {
+
+    if ($columns && $columns[0] == 2) {
+      post_class(array ("span6"));
+    } elseif ($columns && $columns[0] == 3) {
+      post_class(array ("span9"));
+    } else {
+      post_class(array ("span3"));
+    }
+
+  } else {
+
+    if ($columns && $columns[0] == 2) {
+      post_class(array ("span8"));
+    } elseif ($columns && $columns[0] == 3) {
+      post_class(array ("span12"));
+    } else {
+      post_class(array ("span4"));
+    }
+
+  }
+
+
+}
+
+/**
  * Display dynamic sidebar.  Modified version of the one that comes in widgets.php
  * to support applying the sprintf parameters on the after_title, after_widget and
  * before_title values.
