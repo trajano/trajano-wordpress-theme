@@ -101,7 +101,13 @@ header {
 }
 
 .infinite-loader {
-  display: none !important;
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  z-index: 1030;
+  margin: 10px;
+  border-width: 1px 0 0;
 }
 
 header ul.nav li.dropdown:hover > ul.dropdown-menu {
