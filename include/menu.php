@@ -67,7 +67,7 @@ class TwpWalkerNavMenu extends Walker_Nav_Menu
     $value = '';
 
     $classes = empty($item->classes) ? array () : (array)$item->classes;
-    if ($depth > 0 && in_array("dropdown", $item->classes)) {
+    if ($depth > 0 && in_array("dropdown", $classes)) {
       $classes = array_diff($classes, array ("dropdown"));
       $classes[] = "dropdown-submenu";
     }
@@ -89,14 +89,12 @@ class TwpWalkerNavMenu extends Walker_Nav_Menu
     $attributes .= !empty($item->xfn) ? ' rel="' . esc_attr($item->xfn) . '"' : '';
     $attributes .= !empty($item->url) ? ' href="' . esc_attr($item->url) . '"' : '';
 
-    $item_output = $args->before;
-    $item_output .= '<a' . $attributes . '>';
-    $item_output .= $args->link_before . apply_filters('the_title', $item->title, $item->ID) . $args->link_after;
-    if ($depth == 0 && in_array("dropdown", $item->classes)) {
+    $item_output = '<a' . $attributes . '>';
+    $item_output .= apply_filters('the_title', $item->title, $item->ID);
+    if ($depth == 0 && in_array("dropdown", $classes)) {
       $item_output .= " <i class=\"caret\"> </i>";
     }
     $item_output .= '</a>';
-    $item_output .= $args->after;
 
     $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
   }

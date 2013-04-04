@@ -24,6 +24,7 @@
         wp_nav_menu(array (
           'container' => false,
           'menu_class' => 'nav',
+          'fallback_cb' => false,
           'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
           'walker' => new TwpWalkerNavMenu(),
           'theme_location' => 'header-menu'));
