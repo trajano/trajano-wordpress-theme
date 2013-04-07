@@ -17,105 +17,101 @@ the load.
 
 /* Ensure the image on the brand is aligned well */
 header .brand img {
-  vertical-align: middle;
-  margin-right: 0.5em;
+    margin-right: 0.5em;
+    vertical-align: middle;
 }
 
 .multiple-posts article h1 {
-  font-size: 17.5px;
-  line-height: 20px;
-  overflow: hidden;
-}
-
-.multiple-posts article p {
-  overflow: hidden;
+    font-size: 17.5px;
+    line-height: 20px;
 }
 
 .multiple-posts article {
-  margin-bottom: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
 }
 
 .multiple-posts article .thumbnail a {
-  border-width: 0px;
+    border-width: 0;
 }
 
 .multiple-posts article .thumbnail img {
-  height: 150px;
-  border: 0px;
-  width: 100%;
-  display: block;
-  background-position: center;
-  background-size: cover;
-  overflow: hidden;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 150px;
+    border: 0;
+    background-position: center;
+    background-size: cover;
 }
 
 .narrowcolumn .thumbnail {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .narrowcolumn .thumbnail img {
-  width: 100%;
-  height: 300px;
-  background-position: center;
-  background-size: cover;
-  overflow: hidden;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
 }
 
 .hero-unit {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .hero-unit .thumbnail {
-  float: right;
+    float: right;
 }
 
 .hero-unit .thumbnail img {
-  width: 300px;
-  height: 200px;
-  background-position: center;
-  background-size: cover;
-  overflow: hidden;
+    overflow: hidden;
+    width: 300px;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
 }
 
 #sidebars .dsq-widget-list,
 #sidebars .accordion-inner > ul {
-  padding-left: 0px;
-  margin-left: 0px;
-  list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
 }
 
 #sidebars .accordion-inner select {
-  width: 100%;
+    width: 100%;
 }
 
 .widget_categories .accordion-inner > ul > li {
-  padding-left: 0px;
+    padding-left: 0;
 }
 
 .nowrap {
-  white-space: nowrap;
+    white-space: nowrap;
 }
 
 header {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .infinite-loader {
-  display: block;
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  z-index: 1030;
-  margin: 10px;
-  border-width: 1px 0 0;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    z-index: 1030;
+    display: block;
+    margin: 10px;
+    border-width: 1px 0 0;
 }
 
 header ul.nav li.dropdown:hover > ul.dropdown-menu {
-  display: block;
+    display: block;
 }
 
 header .navbar .dropdown-menu {
-  margin-top: 0px;
+    margin-top: 0;
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
@@ -124,25 +120,25 @@ header .navbar .dropdown-menu {
 
 @media (max-width: 767px) {
 
-  #sidebars.span3 {
-    display: none;
-  }
+    #sidebars.span3 {
+        display: none;
+    }
 
-  .hero-unit {
-    padding: 20px;
-  }
+    .hero-unit {
+        padding: 20px;
+    }
 
-  .hero-unit .thumbnail {
-    float: none;
-  }
+    .hero-unit .thumbnail {
+        float: none;
+    }
 
-  .hero-unit .thumbnail img {
-    width: 100%;
-    height: 200px;
-    background-position: center;
-    background-size: cover;
-    overflow: hidden;
-  }
+    .hero-unit .thumbnail img {
+        overflow: hidden;
+        width: 100%;
+        height: 200px;
+        background-position: center;
+        background-size: cover;
+    }
 
 }
 
