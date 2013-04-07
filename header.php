@@ -32,12 +32,7 @@
 
         <div class="nav-collapse pull-right">
           <ul class="nav">
-            <li>
-              <form class="navbar-search" action="?php bloginfo('url'); ?>">
-                <input type="search" class="search-query" name="s" placeholder="<?php _e('Search'); ?>"
-                       value="<?php echo esc_attr(get_search_query())?>"/>
-              </form>
-            </li>
+            <li><?php get_search_form() ?></li>
             <li class="visible-desktop"><a href="<?php echo get_bloginfo_rss('rss2_url'); ?>"><i
                     class="icon-rss icon-white"> </i></a></li>
             <?php
