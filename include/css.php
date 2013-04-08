@@ -8,16 +8,21 @@
  * over.
  */
 if (!is_admin()) {
-  wp_enqueue_style("bootstrap", get_template_directory_uri() . "/" . get_theme_mod("trajano_bootstrap_css"));
-  wp_enqueue_style("colorbox", get_template_directory_uri() . "/" . get_theme_mod("trajano_colorbox_css"));
+    wp_enqueue_style("bootstrap", get_template_directory_uri() . "/" . get_theme_mod("trajano_bootstrap_css"));
+    wp_enqueue_style("colorbox", get_template_directory_uri() . "/" . get_theme_mod("trajano_colorbox_css"));
 
-  $cssDir = opendir(get_template_directory() . "/css");
-  while ($path = readdir($cssDir)) {
-    if ($path != "bootstrap.css" && twp_ends_with($path, ".css")) {
-      wp_enqueue_style($path, get_template_directory_uri() . "/css/" . $path);
+    $cssDir = opendir(get_template_directory() . "/css");
+    while ($path = readdir($cssDir)) {
+        if (twp_ends_with($path, ".css")) {
+            wp_enqueue_style($path, get_template_directory_uri() . "/css/" . $path);
+        }
     }
-  }
-
-  wp_enqueue_style("fontawesome", get_template_directory_uri() . "/fontawesome/css/font-awesome.css");
-  wp_enqueue_style("trajano", get_template_directory_uri() . "/style.css");
+    if (get_theme_mod("trajano_use_cdn")) {
+        wp_enqueue_style("fontawesome", "//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css");
+        wp_enqueue_style("bootstrap-responsive", "//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css");
+    } else {
+        wp_enqueue_style("fontawesome", get_template_directory_uri() . "/fontawesome/css/font-awesome.css");
+        wp_enqueue_style("bootstrap-responsive", get_template_directory_uri() . "/bootstrap/bootstrap-responsive.css");
+    }
+    wp_enqueue_style("trajano", get_template_directory_uri() . "/style.css");
 }

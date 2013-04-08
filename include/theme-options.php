@@ -143,7 +143,7 @@ class TwpThemeOptions
     private function getBootswatchThemes()
     {
         $bootswatchThemes = array();
-        $bootswatchThemes["css/bootstrap.css"] = __("Default Bootstrap");
+        $bootswatchThemes["bootstrap/bootstrap.css"] = __("Default Bootstrap");
         $bootswatchDir = opendir(get_template_directory() . "/bootswatch");
         while ($path = readdir($bootswatchDir)) {
             if ($path == "LICENSE" || $path == "." || $path == ".." || $path == "default" || $path == "img") {
