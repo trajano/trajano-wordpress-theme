@@ -35,7 +35,7 @@ header .brand img {
     border-width: 0;
 }
 
-.multiple-posts article .thumbnail img {
+.multiple-posts article.magazine-layout .thumbnail img {
     display: block;
     overflow: hidden;
     width: 100%;

@@ -1,4 +1,4 @@
-<?php if (twp_is_magazine_layout()) : %>
+<?php if (twp_is_magazine_layout()) : ?>
     <article id="post-<?php the_ID(); ?>" <?php twp_content_post_class(); ?>>
         <div class="thumbnail">
             <button class="btn btn-small btn-block btn-inverse">
@@ -43,14 +43,12 @@
 
         </div>
     </article>
-<?php else: %>
+<?php else: ?>
     <article id="post-<?php the_ID(); ?>" <?php twp_content_post_class(); ?>>
-        <div class="thumbnail">
-            <button class="btn btn-small btn-block btn-inverse">
-                <i class="icon-calendar"> </i> <?php the_time(_('F j, Y')); ?>
-            </button>
+        <div class="well">
             <?php if (has_post_thumbnail()): ?>
-                <a href="<?php the_permalink(); ?>"><?php twp_featured_image("large"); ?></a>
+                <div class="thumbnail pull-right"><a
+                        href="<?php the_permalink(); ?>"><?php the_post_thumbnail("thumb"); ?></a></div>
             <?php endif ?>
 
             <h1><a href="<?php the_permalink(); ?>"
@@ -64,6 +62,7 @@
                     <?php if (is_multi_author()): ?>
                         <i class="icon-user"> </i> <?php the_author_posts_link(); ?>
                     <?php endif ?>
+                    <i class="icon-calendar"> </i> <?php twp_month_link(); ?>
                     <i class="icon-folder-open"> </i> <?php the_category(_(", ")) ?>
                     <?php if (has_tag()): ?>
                         <i class="icon-tags"> </i><?php the_tags("", _(", ")) ?>
