@@ -84,7 +84,7 @@
                 <a href="<?php the_permalink(); ?>" class="btn btn-small btn-block"><i
                         class="icon-eye-open"> </i> <?php _e("Read more"); ?></a>
             <?php endif ?>
-
+            <div class="clearfix"></div>
         </div>
     </article>
 <?php endif ?>
