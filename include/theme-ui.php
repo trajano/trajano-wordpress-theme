@@ -190,6 +190,16 @@ function twp_is_magazine_layout()
 }
 
 /**
+ * Echos the monthly archive link.
+ */
+function twp_month_link()
+{
+    printf("<a href=\"%s\">%s</a>",
+        get_month_link(get_the_time('Y'), get_the_time('m')),
+        get_the_date());
+}
+
+/**
  * Returns the CSS classes for mainArea.  If sidebar is present and active it is "span6" else it is "span12".
  */
 function twp_posts_classes()
