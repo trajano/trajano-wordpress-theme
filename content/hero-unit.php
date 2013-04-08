@@ -14,7 +14,7 @@
           <?php if (is_multi_author()): ?>
             <i class="icon-user"> </i> <?php the_author_posts_link(); ?>
           <?php endif ?>
-          <i class="icon-calendar"> </i> <?php the_date(); ?>
+          <i class="icon-calendar"> </i> <?php twp_month_link(); ?>
           <i class="icon-folder-open"> </i> <?php echo _("Category: "); the_category(_(", "))?>
           <?php if (has_tag()): ?>
             <i class="icon-tags"> </i> <?php the_tags(_("Tags: "), _(", ")) ?>

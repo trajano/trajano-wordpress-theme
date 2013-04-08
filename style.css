@@ -45,6 +45,10 @@ header .brand img {
     background-size: cover;
 }
 
+.multiple-posts article.traditional-layout .thumbnail img {
+    width: 150px;
+}
+
 .narrowcolumn .thumbnail {
     margin-bottom: 10px;
 }
