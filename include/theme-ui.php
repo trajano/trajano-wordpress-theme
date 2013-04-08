@@ -11,9 +11,9 @@ function twp_content_post_class()
 {
     if (!twp_is_magazine_layout()) {
         if (is_active_sidebar('sidebar-1')) {
-            post_class(array("span9"));
+            post_class(array("span9", "traditional-layout"));
         } else {
-            post_class(array("span12"));
+            post_class(array("span12", "traditional-layout"));
         }
         return;
     }
@@ -22,11 +22,11 @@ function twp_content_post_class()
     if (is_active_sidebar('sidebar-1')) {
 
         if ($columns && $columns[0] == 2) {
-            post_class(array("span6"));
+            post_class(array("span6", "magazine-layout"));
         } elseif ($columns && $columns[0] == 3) {
-            post_class(array("span9"));
+            post_class(array("span9", "magazine-layout"));
         } else {
-            post_class(array("span3"));
+            post_class(array("span3", "magazine-layout"));
         }
 
     } else {
