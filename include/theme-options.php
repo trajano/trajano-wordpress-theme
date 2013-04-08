@@ -23,7 +23,7 @@ class TwpThemeOptions
             "transport" => "postMessage"
         ));
         $wp_customize->add_control("bootstrap_css", array(
-            'label' => __('Bootswatch style'),
+            'label' => __('Bootstrap theme'),
             'section' => 'styles',
             'settings' => "trajano_bootstrap_css",
             'type' => 'select',
@@ -136,7 +136,7 @@ class TwpThemeOptions
     }
 
     /**
-     * Bootswatch themes.  This is read from the bootswatch folder and adds the default Bootstrap theme to the list
+     * Bootstrap themes.  This is read from the bootswatch folder and adds the default Bootstrap theme to the list
      * explicitly as it is not in the bootswatch folder and it should be the first value.
      * @return array
      */
@@ -150,6 +150,17 @@ class TwpThemeOptions
                 continue;
             }
             $cssFile = "bootswatch/" . $path . "/bootstrap.css";
+            if (!file_exists(get_template_directory() . "/" . $cssFile)) {
+                continue;
+            }
+            $bootswatchThemes[$cssFile] = sprintf(__("Bootswatch: %s"), $path);
+        }
+        $bootswatchDir = opendir(get_template_directory() . "/bootstrap-themes");
+        while ($path = readdir($bootswatchDir)) {
+            if ($path == "LICENSE" || $path == "." || $path == ".." || $path == "default" || $path == "img") {
+                continue;
+            }
+            $cssFile = "bootstrap-themes/" . $path . "/bootstrap.css";
             if (!file_exists(get_template_directory() . "/" . $cssFile)) {
                 continue;
             }
