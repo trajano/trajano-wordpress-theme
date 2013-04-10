@@ -18,7 +18,7 @@
         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
           <span class="icon-align-justify"></span>
         </a>
-        <a class="brand" href="<?php bloginfo('url'); ?>"><?php twp_home_icon_image(); bloginfo('name'); ?></a>
+        <a class="brand" href="<?php bloginfo('url'); ?>"><?php twp_branding(); ?></a>
 
         <?php
         wp_nav_menu(array (

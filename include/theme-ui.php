@@ -5,6 +5,21 @@
  */
 
 /**
+ * Displays the home icon image or a home icon with the site header.
+ */
+function twp_branding()
+{
+    $imageUrl = get_header_image();
+    if (strlen($imageUrl) == 0) {
+        echo "<i class='icon-home icon-white'> </i> ";
+        bloginfo('name');
+        ;
+    } else {
+        echo sprintf("<img src='%s' alt='' />", $imageUrl);
+    }
+}
+
+/**
  * Extends post_class method to add logic for handling column sizes based on meta data.
  */
 function twp_content_post_class()
@@ -157,19 +172,6 @@ function twp_featured_image($size = "large")
         $alt = "";
     }
     echo sprintf("<img style=\"background-image: url('%s')\" />", $featured_image[0], htmlspecialchars($alt));
-}
-
-/**
- * Displays the home icon image or a home icon.
- */
-function twp_home_icon_image()
-{
-    $imageUrl = get_header_image();
-    if (strlen($imageUrl) == 0) {
-        echo "<i class='icon-home icon-white'> </i> ";
-    } else {
-        echo sprintf("<img src='%s' alt='' />", $imageUrl);
-    }
 }
 
 /**
