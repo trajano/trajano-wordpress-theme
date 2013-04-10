@@ -11,9 +11,11 @@ function twp_branding()
 {
     $imageUrl = get_header_image();
     if (strlen($imageUrl) == 0) {
-        echo "<i class='icon-home icon-white'> </i> ";
-        bloginfo('name');
-        ;
+        if (get_bloginfo("description")) {
+            printf("<i class='icon-home icon-white'> </i> %s <small>%s</small>", get_bloginfo("name"), get_bloginfo("description"));
+        } else {
+            printf("<i class='icon-home icon-white'> </i> %s", get_bloginfo("name"));
+        }
     } else {
         echo sprintf("<img src='%s' alt='' />", $imageUrl);
     }
