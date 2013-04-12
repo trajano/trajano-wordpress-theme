@@ -1,11 +1,13 @@
 <?php if (twp_is_magazine_layout()) : ?>
     <article id="post-<?php the_ID(); ?>" <?php twp_content_post_class(); ?>>
-        <div class="thumbnail">
-            <button class="btn btn-small btn-block btn-inverse">
-                <i class="icon-calendar"> </i> <?php the_time(_('F j, Y')); ?>
-            </button>
+        <div class="well">
+            <h6>
+                <i class="icon-calendar"> </i> <?php echo get_the_date(); ?>
+            </h6>
             <?php if (has_post_thumbnail()): ?>
-                <a href="<?php the_permalink(); ?>"><?php twp_featured_image("large"); ?></a>
+                <div class="thumbnail">
+                    <a href="<?php the_permalink(); ?>"><?php twp_featured_image("large"); ?></a>
+                </div>
             <?php endif ?>
 
             <h1><a href="<?php the_permalink(); ?>"

@@ -35,14 +35,16 @@ header .brand img {
     border-width: 0;
 }
 
-.multiple-posts article.magazine-layout .thumbnail img {
+.multiple-posts article.magazine-layout .thumbnail {
     display: block;
     overflow: hidden;
     width: 100%;
-    height: 150px;
-    border: 0;
-    background-position: center;
-    background-size: cover;
+    max-height: 150px;
+    margin-bottom: 10px;
+}
+
+.multiple-posts article.magazine-layout .thumbnail img {
+    width: 100%;
 }
 
 .multiple-posts article.traditional-layout .thumbnail img {
@@ -50,15 +52,21 @@ header .brand img {
 }
 
 .narrowcolumn .thumbnail {
+    vertical-align: middle;
+    line-height: 300px;
     margin-bottom: 10px;
 }
 
-.narrowcolumn .thumbnail img {
+.narrowcolumn .thumbnail a {
+    display: block;
     overflow: hidden;
     width: 100%;
     height: 300px;
-    background-position: center;
-    background-size: cover;
+}
+
+.narrowcolumn .thumbnail a img {
+    width: 100%;
+    vertical-align: middle;
 }
 
 .hero-unit {

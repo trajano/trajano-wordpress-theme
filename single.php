@@ -7,7 +7,9 @@ the_post(); ?>
     <?php if (has_post_thumbnail()):
         $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id(), "full")?>
         <div class="row">
-            <a class="thumbnail" href="<?php echo $featured_image[0] ?>"><?php twp_featured_image("full"); ?></a>
+            <div class="thumbnail">
+                <a href="<?php echo $featured_image[0] ?>"><?php twp_featured_image("full"); ?></a>
+            </div>
         </div>
     <?php endif ?>
     <div class="row">

@@ -19,6 +19,7 @@ jQuery(function ($) {
     applyMasonry();
 
     $(window).resize(applyMasonry);
+    content.imagesLoaded(applyMasonry);
 
     $(document.body).bind("post-load", function () {
         if (content.hasClass("masonry")) {

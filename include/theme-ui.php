@@ -173,7 +173,7 @@ function twp_featured_image($size = "large")
     if (!count($alt)) {
         $alt = "";
     }
-    echo sprintf("<img style=\"background-image: url('%s')\" />", $featured_image[0], htmlspecialchars($alt));
+    echo sprintf("<img src=\"%s\" />", $featured_image[0], htmlspecialchars($alt));
 }
 
 /**

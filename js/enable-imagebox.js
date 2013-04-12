@@ -1,7 +1,7 @@
 jQuery(function ($) {
     'use strict';
 
-    var images = $('.storycontent a, a.thumbnail').has('img');
+    var images = $('.storycontent a, .thumbnail a').has('img');
 
     function applyColorBox() {
         if (images.length === 0) {
