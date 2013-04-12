@@ -153,7 +153,7 @@ class TwpThemeOptions
             if (!file_exists(get_template_directory() . "/" . $cssFile)) {
                 continue;
             }
-            $bootswatchThemes[$cssFile] = sprintf(__("Bootswatch: %s"), $path);
+            $bootswatchThemes[get_template_directory_uri() . "/" . $cssFile] = sprintf(__("Bootswatch: %s"), $path);
         }
         $bootswatchDir = opendir(get_template_directory() . "/bootstrap-themes");
         while ($path = readdir($bootswatchDir)) {
@@ -164,7 +164,7 @@ class TwpThemeOptions
             if (!file_exists(get_template_directory() . "/" . $cssFile)) {
                 continue;
             }
-            $bootswatchThemes[$cssFile] = $path;
+            $bootswatchThemes[get_template_directory_uri() . "/" . $cssFile] = $path;
         }
         return $bootswatchThemes;
     }
@@ -181,7 +181,7 @@ class TwpThemeOptions
             if (!file_exists(get_template_directory() . "/" . $cssFile)) {
                 continue;
             }
-            $themes[$cssFile] = $path;
+            $themes[get_template_directory_uri() . "/" . $cssFile] = $path;
         }
         return $themes;
     }

@@ -6,13 +6,14 @@
  */
 function twp_get_css_cdn($path)
 {
-    if ($path == "bootstrap/bootstrap.css") {
+    if ($path == get_template_directory_uri() + "/bootstrap/bootstrap.css") {
         return "//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css";
-    } elseif (strrpos($path, "bootswatch/") === 0) {
-        $name = substr($path, strlen("bootswatch/"), strpos($path, "/", strlen("bootswatch/")) - strlen("bootswatch/"));
+    } elseif (strrpos($path, get_template_directory_uri() + "/bootswatch/") === 0) {
+        $prefix_length = strlen(get_template_directory_uri() + "/bootswatch/");
+        $name = substr($path, $prefix_length, strpos($path, "/", $prefix_length) - $prefix_length);
         return sprintf("//netdna.bootstrapcdn.com/bootswatch/2.3.1/%s/bootstrap.min.css", $name);
     }
-    return get_template_directory_uri() . "/" . $path;
+    return $path;
 }
 
 /**
@@ -24,7 +25,7 @@ function twp_get_css_cdn($path)
  * over.
  */
 if (!is_admin()) {
-    wp_enqueue_style("colorbox", get_template_directory_uri() . "/" . get_theme_mod("trajano_colorbox_css"));
+    wp_enqueue_style("colorbox", get_theme_mod("trajano_colorbox_css"));
 
     $cssDir = opendir(get_template_directory() . "/css");
     while ($path = readdir($cssDir)) {
@@ -37,7 +38,7 @@ if (!is_admin()) {
         wp_enqueue_style("fontawesome", "//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css");
         wp_enqueue_style("bootstrap-responsive", "//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css");
     } else {
-        wp_enqueue_style("bootstrap", get_template_directory_uri() . "/" . get_theme_mod("trajano_bootstrap_css"));
+        wp_enqueue_style("bootstrap", get_theme_mod("trajano_bootstrap_css"));
         wp_enqueue_style("fontawesome", get_template_directory_uri() . "/fontawesome/css/font-awesome.css");
         wp_enqueue_style("bootstrap-responsive", get_template_directory_uri() . "/bootstrap/bootstrap-responsive.css");
     }
