@@ -16,8 +16,7 @@ jQuery(function ($) {
         }
     }
 
-    applyMasonry();
-
+    content.imagesLoaded(applyMasonry);
     $(window).resize(applyMasonry);
 
     $(document.body).bind("post-load", function () {
