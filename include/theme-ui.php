@@ -164,6 +164,26 @@ function twp_edit_post_link($class = "")
 }
 
 /**
+ * Finds the first "img" and returns a link to the image.  However, if the featured image is set, it will use the
+ * featured image instead and return smaller sized images.
+ * @return string
+ */
+function twp_first_image_link()
+{
+    if (has_post_thumbnail()) {
+        $full = wp_get_attachment_image_src(get_post_thumbnail_id(), "full");
+        $medium = wp_get_attachment_image_src(get_post_thumbnail_id(), "medium");
+        printf('<a href="%s" title="%s"><img src="%s" /></a>', $full[0], esc_attr(the_title_attribute('echo=0')), $medium[0]);
+    } else {
+        if (!preg_match('/<img\s[^>]*?src=[\'"](.+?)[\'"]/is', get_the_content(), $matches)) {
+            return;
+        }
+        $image_src = $matches[1];
+        printf('<a href="%s" title="%s"><img src="%s"></a>', $image_src, esc_attr(the_title_attribute('echo=0')), $image_src);
+    }
+}
+
+/**
  * Returns true if the current page is in magazine layout.
  * @return bool
  */

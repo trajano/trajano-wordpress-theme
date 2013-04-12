@@ -1,14 +1,12 @@
 jQuery(function ($) {
     'use strict';
 
-    var images = $('.storycontent a, .thumbnail a').has('img');
-
     function applyColorBox() {
+        var images = $('.single-post .storycontent a, .single-post .thumbnail a, .format-image .thumbnail a').has('img');
         if (images.length === 0) {
             return;
         }
-        var colorBoxEnabled = $(images[0]).hasClass("cboxElement");
-        if (!colorBoxEnabled && $(document).width() >= 768) {
+        if ($(document).width() >= 768) {
             images.colorbox({
                 rel: 'gal',
                 maxWidth: "100%",
@@ -16,7 +14,10 @@ jQuery(function ($) {
                 fixed: true,
                 scrolling: false
             });
-        } else if (colorBoxEnabled && $(document).width() < 768) {
+            return;
+        }
+        var colorBoxEnabled = $(images[0]).hasClass("cboxElement");
+        if (colorBoxEnabled && $(document).width() < 768) {
             $.colorbox.close();
 
             $('.cboxElement')
@@ -27,4 +28,5 @@ jQuery(function ($) {
 
     applyColorBox();
     $(window).resize(applyColorBox);
+    $(document.body).bind("post-load", applyColorBox);
 });
