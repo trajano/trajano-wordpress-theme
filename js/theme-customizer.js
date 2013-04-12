@@ -11,6 +11,7 @@ jQuery(function ($) {
         function (value) {
             value.bind(function (to) {
                 $('#colorbox-css')[0].href = to;
+                $.colorbox.close();
             });
         });
 });
