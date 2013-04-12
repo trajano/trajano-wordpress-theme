@@ -83,7 +83,7 @@
                     <?php twp_edit_post_link("btn btn-small"); ?>
                 </div>
             <?php else : ?>
-                <a href="<?php the_permalink(); ?>" class="btn btn-small btn-block"><i
+                <a href="<?php the_permalink(); ?>" class="btn btn-small"><i
                         class="icon-eye-open"> </i> <?php _e("Read more"); ?></a>
             <?php endif ?>
             <div class="clearfix"></div>
