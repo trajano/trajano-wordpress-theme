@@ -5,8 +5,10 @@ if (strpos($_SERVER['HTTP_USER_AGENT'], "Windows Live Writer")) :
 endif;
 if (is_paged()) :
     get_template_part('index', get_post_format()); else :
-    wp_enqueue_script("twp-enable-masonry", get_template_directory_uri() . "/js/enable-masonry.js",
-        array("jquery-masonry"));
+    if (twp_is_magazine_layout()) {
+        wp_enqueue_script("twp-enable-masonry", get_template_directory_uri() . "/js/enable-masonry.js",
+            array("jquery-masonry"));
+    }
     get_header();
     ?>
     <section class="container">
