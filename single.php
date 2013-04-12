@@ -8,7 +8,7 @@ the_post(); ?>
         $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id(), "full")?>
         <div class="row">
             <div class="thumbnail">
-                <a href="<?php echo $featured_image[0] ?>"><?php twp_featured_image("full"); ?></a>
+                <a href="<?php echo $featured_image[0] ?>"><?php the_post_thumbnail("large"); ?></a>
             </div>
         </div>
     <?php endif ?>

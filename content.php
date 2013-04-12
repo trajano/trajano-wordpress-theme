@@ -6,7 +6,7 @@
             </h6>
             <?php if (has_post_thumbnail()): ?>
                 <div class="thumbnail">
-                    <a href="<?php the_permalink(); ?>"><?php twp_featured_image("large"); ?></a>
+                    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail("medium") ?></a>
                 </div>
             <?php endif ?>
 

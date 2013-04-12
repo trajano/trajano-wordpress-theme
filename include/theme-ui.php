@@ -164,19 +164,6 @@ function twp_edit_post_link($class = "")
 }
 
 /**
- * Displays the featured image as a background.
- */
-function twp_featured_image($size = "large")
-{
-    $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id(), $size);
-    $alt = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true);
-    if (!count($alt)) {
-        $alt = "";
-    }
-    echo sprintf("<img src=\"%s\" />", $featured_image[0], htmlspecialchars($alt));
-}
-
-/**
  * Returns true if the current page is in magazine layout.
  * @return bool
  */

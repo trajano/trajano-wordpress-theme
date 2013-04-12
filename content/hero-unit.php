@@ -2,7 +2,7 @@
   <div class="span12">
     <div id="post-<?php the_ID(); ?>" class="hero-unit">
       <?php if (has_post_thumbnail()): ?>
-        <a class="thumbnail" href="<?php the_permalink(); ?>"><?php twp_featured_image(); ?></a>
+        <a class="thumbnail" href="<?php the_permalink(); ?>"><?php the_post_thumbnail("medium"); ?></a>
       <?php endif ?>
 
       <h1><a href="<?php the_permalink(); ?>"
