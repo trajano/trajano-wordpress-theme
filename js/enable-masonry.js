@@ -19,10 +19,10 @@ jQuery(function ($) {
     applyMasonry();
 
     $(window).resize(applyMasonry);
-    content.imagesLoaded(applyMasonry);
 
     $(document.body).bind("post-load", function () {
         if (content.hasClass("masonry")) {
+            content.masonry('option', { isAnimated: true});
             content.masonry("appended", content.find("article:not(.masonry-brick)"), true);
         }
     });
