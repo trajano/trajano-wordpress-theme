@@ -1,9 +1,9 @@
 <?php if (twp_is_magazine_layout()) : ?>
     <article id="post-<?php the_ID(); ?>" <?php twp_content_post_class(); ?>>
         <div class="well">
-            <h6>
+            <h5>
                 <i class="icon-calendar"> </i> <?php echo get_the_date(); ?>
-            </h6>
+            </h5>
             <?php if (has_post_thumbnail()): ?>
                 <div class="thumbnail">
                     <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail("medium") ?></a>
