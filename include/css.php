@@ -6,10 +6,10 @@
  */
 function twp_get_css_cdn($path)
 {
-    if ($path == get_template_directory_uri() + "/bootstrap/bootstrap.css") {
+    if ($path == get_template_directory_uri() . "/bootstrap/bootstrap.css") {
         return "//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css";
-    } elseif (strrpos($path, get_template_directory_uri() + "/bootswatch/") === 0) {
-        $prefix_length = strlen(get_template_directory_uri() + "/bootswatch/");
+    } elseif (strrpos($path, get_template_directory_uri() . "/bootswatch/") === 0) {
+        $prefix_length = strlen(get_template_directory_uri() . "/bootswatch/");
         $name = substr($path, $prefix_length, strpos($path, "/", $prefix_length) - $prefix_length);
         return sprintf("//netdna.bootstrapcdn.com/bootswatch/2.3.1/%s/bootstrap.min.css", $name);
     }
