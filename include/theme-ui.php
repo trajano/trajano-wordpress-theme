@@ -37,7 +37,6 @@ function twp_content_post_class()
     $columns = get_post_meta(get_the_ID(), "twp_columns", true);
 
     if (is_active_sidebar('sidebar-1')) {
-
         if ($columns && $columns[0] == 2) {
             post_class(array("span6", "magazine-layout"));
         } elseif ($columns && $columns[0] == 3) {
@@ -45,9 +44,7 @@ function twp_content_post_class()
         } else {
             post_class(array("span3", "magazine-layout"));
         }
-
     } else {
-
         if ($columns && $columns[0] == 2) {
             post_class(array("span8"));
         } elseif ($columns && $columns[0] == 3) {
@@ -55,10 +52,7 @@ function twp_content_post_class()
         } else {
             post_class(array("span4"));
         }
-
     }
-
-
 }
 
 /**
@@ -172,7 +166,12 @@ function twp_first_image_link()
 {
     if (has_post_thumbnail()) {
         $full = wp_get_attachment_image_src(get_post_thumbnail_id(), "full");
-        $medium = wp_get_attachment_image_src(get_post_thumbnail_id(), "medium");
+        $columns = get_post_meta(get_the_ID(), "twp_columns", true);
+        if ($columns && ($columns[0] == 2 || $columns[0] == 3)) {
+            $medium = wp_get_attachment_image_src(get_post_thumbnail_id(), "large");
+        } else {
+            $medium = wp_get_attachment_image_src(get_post_thumbnail_id(), "medium");
+        }
         printf('<a href="%s" title="%s"><img src="%s" /></a>', $full[0], esc_attr(the_title_attribute('echo=0')), $medium[0]);
     } else {
         if (!preg_match('/<img\s[^>]*?src=[\'"](.+?)[\'"]/is', get_the_content(), $matches)) {

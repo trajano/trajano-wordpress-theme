@@ -1,4 +1,5 @@
-<?php if (twp_is_magazine_layout()) : ?>
+<?php
+if (twp_is_magazine_layout()) : ?>
     <article id="post-<?php the_ID(); ?>" <?php twp_content_post_class(); ?>>
         <div class="well">
             <h5>
@@ -6,7 +7,13 @@
             </h5>
             <?php if (has_post_thumbnail()): ?>
                 <div class="thumbnail">
-                    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail("medium") ?></a>
+                    <?php
+                    $columns = get_post_meta(get_the_ID(), "twp_columns", true);
+                    if ($columns && ($columns[0] == 2 || $columns[0] == 3)): ?>
+                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail("large") ?></a>
+                    <?php else: ?>
+                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail("medium") ?></a>
+                    <?php endif; ?>
                 </div>
             <?php endif ?>
 
