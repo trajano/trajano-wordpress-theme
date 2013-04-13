@@ -238,11 +238,11 @@ function twp_is_magazine_layout()
  */
 function twp_is_no_linking_controls()
 {
-    return !get_theme_mod("magazine_control_author") &&
-        !get_theme_mod("magazine_control_category") &&
-        !get_theme_mod("magazine_control_tags") &&
-        !get_theme_mod("magazine_control_comments") &&
-        !get_theme_mod("magazine_control_buttons");
+    return !get_theme_mod("trajano_magazine_control_author") &&
+        !get_theme_mod("trajano_magazine_control_category") &&
+        !get_theme_mod("trajano_magazine_control_tags") &&
+        !get_theme_mod("trajano_magazine_control_comments") &&
+        !get_theme_mod("trajano_magazine_control_buttons");
 }
 
 /**
