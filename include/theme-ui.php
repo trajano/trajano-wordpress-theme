@@ -37,7 +37,6 @@ function twp_content_post_class()
         $classes[] = "no-magazine-links";
     }
 
-
     if (!twp_is_magazine_layout()) {
         $classes[] = "traditional-layout";
         if (is_active_sidebar('sidebar-1')) {
@@ -174,8 +173,8 @@ function twp_edit_post_link($class = "")
 }
 
 /**
- * Finds the first "img" and returns a link to the image.  However, if the featured image is set, it will use the
- * featured image instead and return smaller sized images.
+ * Finds the first "img" and returns a link to the image with the image.  However, if the featured image is set, it
+ * will use the featured image instead and return smaller sized images.
  * @return string
  */
 function twp_first_image_link()
@@ -199,6 +198,24 @@ function twp_first_image_link()
 }
 
 /**
+ * Finds the first "img" and returns a URL to the image.  However, if the featured image is set, it will use the
+ * featured image instead and return smaller sized images.
+ * @return string
+ */
+function twp_get_first_image_url()
+{
+    if (has_post_thumbnail()) {
+        $full = wp_get_attachment_image_src(get_post_thumbnail_id(), "full");
+        return $full[0];
+    } else {
+        if (!preg_match('/<img\s[^>]*?src=[\'"](.+?)[\'"]/is', get_the_content(), $matches)) {
+            return;
+        }
+        return $matches[1];
+    }
+}
+
+/**
  * Returns true if the current page is in magazine layout.
  * @return bool
  */
@@ -213,6 +230,19 @@ function twp_is_magazine_layout()
         (!is_month() || get_theme_mod("trajano_magazine_layout_date")) &&
         (!is_day() || get_theme_mod("trajano_magazine_layout_date")) &&
         !is_single();
+}
+
+/**
+ * Returns true if there are no linking controls set on the theme.
+ * @return bool
+ */
+function twp_is_no_linking_controls()
+{
+    return !get_theme_mod("magazine_control_author") &&
+        !get_theme_mod("magazine_control_category") &&
+        !get_theme_mod("magazine_control_tags") &&
+        !get_theme_mod("magazine_control_comments") &&
+        !get_theme_mod("magazine_control_buttons");
 }
 
 /**

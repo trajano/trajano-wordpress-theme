@@ -2,7 +2,9 @@ jQuery(function ($) {
     'use strict';
 
     function applyColorBox() {
-        var images = $('.single-post .storycontent a, .single-post .thumbnail a, .format-image .thumbnail a').has('img');
+        var images = $('.single-post .storycontent a, .single-post .thumbnail a').has('img')
+            .concat($('.format-image .thumbnail a, .format-image h1 a'));
+
         if (images.length === 0) {
             return;
         }
