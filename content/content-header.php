@@ -1,6 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php twp_content_post_class(); ?>>
 <div class="well"
-    <?php if (twp_is_no_linking_controls() && get_post_format() == 'standard'): ?>
+    <?php if (twp_is_no_linking_controls() && get_post_format() === false): ?>
         onclick="location.href = '<?php the_permalink() ?>';"
     <?php endif; ?>
     >
