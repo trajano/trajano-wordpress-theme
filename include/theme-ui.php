@@ -26,33 +26,49 @@ function twp_branding()
  */
 function twp_content_post_class()
 {
+    $classes = array();
+
+    if (!get_theme_mod("magazine_control_author") &&
+        !get_theme_mod("magazine_control_category") &&
+        !get_theme_mod("magazine_control_tags") &&
+        !get_theme_mod("magazine_control_comments") &&
+        !get_theme_mod("magazine_control_buttons")
+    ) {
+        $classes[] = "no-magazine-links";
+    }
+
+
     if (!twp_is_magazine_layout()) {
+        $classes[] = "traditional-layout";
         if (is_active_sidebar('sidebar-1')) {
-            post_class(array("span9", "traditional-layout"));
+            $classes[] = "span9";
         } else {
-            post_class(array("span12", "traditional-layout"));
+            $classes[] = "span12";
         }
+        post_class($classes);
         return;
     }
     $columns = get_post_meta(get_the_ID(), "twp_columns", true);
 
+    $classes[] = "magazine-layout";
     if (is_active_sidebar('sidebar-1')) {
         if ($columns && $columns[0] == 2) {
-            post_class(array("span6", "magazine-layout"));
+            $classes[] = "span6";
         } elseif ($columns && $columns[0] == 3) {
-            post_class(array("span9", "magazine-layout"));
+            $classes[] = "span9";
         } else {
-            post_class(array("span3", "magazine-layout"));
+            $classes[] = "span3";
         }
     } else {
         if ($columns && $columns[0] == 2) {
-            post_class(array("span8"));
+            $classes[] = "span8";
         } elseif ($columns && $columns[0] == 3) {
-            post_class(array("span12"));
+            $classes[] = "span12";
         } else {
-            post_class(array("span4"));
+            $classes[] = "span4";
         }
     }
+    post_class($classes);
 }
 
 /**
