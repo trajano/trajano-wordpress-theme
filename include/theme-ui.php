@@ -26,33 +26,48 @@ function twp_branding()
  */
 function twp_content_post_class()
 {
+    $classes = array();
+
+    if (!get_theme_mod("magazine_control_author") &&
+        !get_theme_mod("magazine_control_category") &&
+        !get_theme_mod("magazine_control_tags") &&
+        !get_theme_mod("magazine_control_comments") &&
+        !get_theme_mod("magazine_control_buttons")
+    ) {
+        $classes[] = "no-magazine-links";
+    }
+
     if (!twp_is_magazine_layout()) {
+        $classes[] = "traditional-layout";
         if (is_active_sidebar('sidebar-1')) {
-            post_class(array("span9", "traditional-layout"));
+            $classes[] = "span9";
         } else {
-            post_class(array("span12", "traditional-layout"));
+            $classes[] = "span12";
         }
+        post_class($classes);
         return;
     }
     $columns = get_post_meta(get_the_ID(), "twp_columns", true);
 
+    $classes[] = "magazine-layout";
     if (is_active_sidebar('sidebar-1')) {
         if ($columns && $columns[0] == 2) {
-            post_class(array("span6", "magazine-layout"));
+            $classes[] = "span6";
         } elseif ($columns && $columns[0] == 3) {
-            post_class(array("span9", "magazine-layout"));
+            $classes[] = "span9";
         } else {
-            post_class(array("span3", "magazine-layout"));
+            $classes[] = "span3";
         }
     } else {
         if ($columns && $columns[0] == 2) {
-            post_class(array("span8"));
+            $classes[] = "span8";
         } elseif ($columns && $columns[0] == 3) {
-            post_class(array("span12"));
+            $classes[] = "span12";
         } else {
-            post_class(array("span4"));
+            $classes[] = "span4";
         }
     }
+    post_class($classes);
 }
 
 /**
@@ -158,8 +173,8 @@ function twp_edit_post_link($class = "")
 }
 
 /**
- * Finds the first "img" and returns a link to the image.  However, if the featured image is set, it will use the
- * featured image instead and return smaller sized images.
+ * Finds the first "img" and returns a link to the image with the image.  However, if the featured image is set, it
+ * will use the featured image instead and return smaller sized images.
  * @return string
  */
 function twp_first_image_link()
@@ -183,6 +198,24 @@ function twp_first_image_link()
 }
 
 /**
+ * Finds the first "img" and returns a URL to the image.  However, if the featured image is set, it will use the
+ * featured image instead and return smaller sized images.
+ * @return string
+ */
+function twp_get_first_image_url()
+{
+    if (has_post_thumbnail()) {
+        $full = wp_get_attachment_image_src(get_post_thumbnail_id(), "full");
+        return $full[0];
+    } else {
+        if (!preg_match('/<img\s[^>]*?src=[\'"](.+?)[\'"]/is', get_the_content(), $matches)) {
+            return;
+        }
+        return $matches[1];
+    }
+}
+
+/**
  * Returns true if the current page is in magazine layout.
  * @return bool
  */
@@ -197,6 +230,19 @@ function twp_is_magazine_layout()
         (!is_month() || get_theme_mod("trajano_magazine_layout_date")) &&
         (!is_day() || get_theme_mod("trajano_magazine_layout_date")) &&
         !is_single();
+}
+
+/**
+ * Returns true if there are no linking controls set on the theme.
+ * @return bool
+ */
+function twp_is_no_linking_controls()
+{
+    return !get_theme_mod("magazine_control_author") &&
+        !get_theme_mod("magazine_control_category") &&
+        !get_theme_mod("magazine_control_tags") &&
+        !get_theme_mod("magazine_control_comments") &&
+        !get_theme_mod("magazine_control_buttons");
 }
 
 /**

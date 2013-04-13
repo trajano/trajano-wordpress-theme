@@ -31,6 +31,10 @@ header .brand img {
     margin-bottom: 10px;
 }
 
+.multiple-posts article.magazine-layout.no-magazine-links .well {
+    cursor: pointer;
+}
+
 .multiple-posts article.magazine-layout.format-standard .thumbnail {
     overflow: hidden;
     width: 100%;

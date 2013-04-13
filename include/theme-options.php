@@ -133,6 +133,75 @@ class TwpThemeOptions
                 "right" => __("Sidebar on the right")
             )
         ));
+
+        /*
+         * Layout section
+         */
+        $wp_customize->add_section('magazine_controls', array(
+            'title' => __('Magazine controls'),
+            'priority' => 92,
+        ));
+
+        $wp_customize->add_setting("trajano_magazine_control_date", array(
+            "default" => true
+        ));
+        $wp_customize->add_control("magazine_control_date", array(
+            'label' => __('Show date'),
+            'section' => 'magazine_controls',
+            'settings' => "trajano_magazine_control_date",
+            'type' => 'checkbox'
+        ));
+
+        $wp_customize->add_setting("trajano_magazine_control_category", array(
+            "default" => true
+        ));
+        $wp_customize->add_control("magazine_control_category", array(
+            'label' => __('Show categories'),
+            'section' => 'magazine_controls',
+            'settings' => "trajano_magazine_control_category",
+            'type' => 'checkbox'
+        ));
+
+        $wp_customize->add_setting("trajano_magazine_control_tags", array(
+            "default" => true
+        ));
+        $wp_customize->add_control("magazine_control_tags", array(
+            'label' => __('Show tags'),
+            'section' => 'magazine_controls',
+            'settings' => "trajano_magazine_control_tags",
+            'type' => 'checkbox'
+        ));
+
+        $wp_customize->add_setting("trajano_magazine_control_author", array(
+            "default" => true
+        ));
+        $wp_customize->add_control("magazine_control_author", array(
+            'label' => __('Show author'),
+            'section' => 'magazine_controls',
+            'settings' => "trajano_magazine_control_author",
+            'type' => 'checkbox'
+        ));
+
+        $wp_customize->add_setting("trajano_magazine_control_comments", array(
+            "default" => true
+        ));
+        $wp_customize->add_control("magazine_control_comments", array(
+            'label' => __('Show comments'),
+            'section' => 'magazine_controls',
+            'settings' => "trajano_magazine_control_comments",
+            'type' => 'checkbox'
+        ));
+
+        $wp_customize->add_setting("trajano_magazine_control_buttons", array(
+            "default" => true,
+        ));
+        $wp_customize->add_control("magazine_control_buttons", array(
+            'label' => __('Show buttons'),
+            'section' => 'magazine_controls',
+            'settings' => "trajano_magazine_control_buttons",
+            'type' => 'checkbox'
+        ));
+
     }
 
     /**
