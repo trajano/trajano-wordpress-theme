@@ -17,7 +17,7 @@ function twp_branding()
             printf("<i class='icon-home icon-white'> </i> %s", get_bloginfo("name"));
         }
     } else {
-        echo sprintf("<img src='%s' alt='' />", $imageUrl);
+        echo sprintf("<img src='%s' alt='%s' />", $imageUrl, get_bloginfo("name"));
     }
 }
 
