@@ -4,9 +4,9 @@
     <div class="thumbnail">
         <?php twp_first_image_link() ?>
     </div>
-    <h1><a href="<?php twp_get_first_image_url(); ?>"
+    <h4><a href="<?php twp_get_first_image_url(); ?>"
            title="<?php echo esc_attr(sprintf(__('Permalink to %s'), the_title_attribute('echo=0'))); ?>"
-           rel="bookmark"><?php the_title(); ?></a></h1>
+           rel="bookmark"><?php the_title(); ?></a></h4>
 
     <?php get_template_part('content/content-footer', get_post_format()); ?>
 <?php else: ?>
@@ -16,9 +16,9 @@
                 <?php twp_first_image_link() ?>
             </div>
 
-            <h1><a href="<?php the_permalink(); ?>"
+            <h4><a href="<?php the_permalink(); ?>"
                    title="<?php echo esc_attr(sprintf(__('Permalink to %s'), the_title_attribute('echo=0'))); ?>"
-                   rel="bookmark"><?php the_title(); ?></a></h1>
+                   rel="bookmark"><?php the_title(); ?></a></h4>
 
 
             <p class="text-info">

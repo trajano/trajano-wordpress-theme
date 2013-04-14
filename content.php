@@ -14,9 +14,9 @@ if (twp_is_magazine_layout()) :
         </div>
     <?php endif ?>
 
-    <h1><a href="<?php the_permalink(); ?>"
+    <h4><a href="<?php the_permalink(); ?>"
            title="<?php echo esc_attr(sprintf(__('Permalink to %s'), the_title_attribute('echo=0'))); ?>"
-           rel="bookmark"><?php the_title(); ?></a></h1>
+           rel="bookmark"><?php the_title(); ?></a></h4>
 
     <?php the_excerpt() ?>
 
@@ -30,9 +30,9 @@ if (twp_is_magazine_layout()) :
                         href="<?php the_permalink(); ?>"><?php the_post_thumbnail("thumb"); ?></a></div>
             <?php endif ?>
 
-            <h1><a href="<?php the_permalink(); ?>"
+            <h4><a href="<?php the_permalink(); ?>"
                    title="<?php echo esc_attr(sprintf(__('Permalink to %s'), the_title_attribute('echo=0'))); ?>"
-                   rel="bookmark"><?php the_title(); ?></a></h1>
+                   rel="bookmark"><?php the_title(); ?></a></h4>
 
             <?php the_excerpt() ?>
 

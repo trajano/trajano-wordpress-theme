@@ -21,11 +21,6 @@ header .brand img {
     vertical-align: middle;
 }
 
-.multiple-posts article h1 {
-    font-size: 17.5px;
-    line-height: 20px;
-}
-
 .multiple-posts article {
     overflow: hidden;
     margin-bottom: 10px;
