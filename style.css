@@ -67,6 +67,7 @@ header .brand img {
     overflow: hidden;
     width: 100%;
     max-height: 300px;
+    margin-bottom: 20px;
 }
 
 .narrowcolumn .thumbnail img {
