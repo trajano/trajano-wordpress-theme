@@ -1,12 +1,10 @@
 <?php
 /**
  * This file is responsible for setting up the programming environment of the theme.  It is responsible for loading up
- * PHP modules in the include folder and define utility functions.  It initializes the PHP error reporting to be strict
- * to reduce the chances of developer error.
+ * PHP modules in the include folder and define utility functions.
  *
  * PHP function libraries are imported from the include folder and are loaded using require_once.
  */
-error_reporting(E_ALL);
 
 /**
  * Checks if the string ends with another string.
