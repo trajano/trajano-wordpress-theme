@@ -63,7 +63,7 @@ header .brand img {
     width: 100%;
 }
 
-.narrowcolumn.format-standard .thumbnail {
+.narrowcolumn.format-standard .thumbnail.full-width {
     overflow: hidden;
     width: 100%;
     max-height: 300px;
