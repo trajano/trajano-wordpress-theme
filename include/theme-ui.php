@@ -222,14 +222,14 @@ function twp_get_first_image_url()
 function twp_is_magazine_layout()
 {
     return (!is_home() || get_theme_mod("trajano_magazine_layout_home")) &&
-        (!is_category() || get_theme_mod("trajano_magazine_layout_category")) &&
-        (!is_tag() || get_theme_mod("trajano_magazine_layout_tag")) &&
-        (!is_search() || get_theme_mod("trajano_magazine_layout_search")) &&
-        (!is_author() || get_theme_mod("trajano_magazine_layout_author")) &&
-        (!is_year() || get_theme_mod("trajano_magazine_layout_date")) &&
-        (!is_month() || get_theme_mod("trajano_magazine_layout_date")) &&
-        (!is_day() || get_theme_mod("trajano_magazine_layout_date")) &&
-        !is_single();
+    (!is_category() || get_theme_mod("trajano_magazine_layout_category")) &&
+    (!is_tag() || get_theme_mod("trajano_magazine_layout_tag")) &&
+    (!is_search() || get_theme_mod("trajano_magazine_layout_search")) &&
+    (!is_author() || get_theme_mod("trajano_magazine_layout_author")) &&
+    (!is_year() || get_theme_mod("trajano_magazine_layout_date")) &&
+    (!is_month() || get_theme_mod("trajano_magazine_layout_date")) &&
+    (!is_day() || get_theme_mod("trajano_magazine_layout_date")) &&
+    !is_single();
 }
 
 /**
@@ -239,10 +239,10 @@ function twp_is_magazine_layout()
 function twp_is_no_linking_controls()
 {
     return !get_theme_mod("trajano_magazine_control_author") &&
-        !get_theme_mod("trajano_magazine_control_category") &&
-        !get_theme_mod("trajano_magazine_control_tags") &&
-        !get_theme_mod("trajano_magazine_control_comments") &&
-        !get_theme_mod("trajano_magazine_control_buttons");
+    !get_theme_mod("trajano_magazine_control_category") &&
+    !get_theme_mod("trajano_magazine_control_tags") &&
+    !get_theme_mod("trajano_magazine_control_comments") &&
+    !get_theme_mod("trajano_magazine_control_buttons");
 }
 
 /**
